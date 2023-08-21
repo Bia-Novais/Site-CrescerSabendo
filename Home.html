@@ -156,25 +156,25 @@
                         
                           <div class="card-body two">
                               <div class="container2" style="padding: 40px 20px;">
-                                <form action="https://formsubmit.co/bianovais08@gmail.com" method="POST">
+                                <form action="./php/enviar-prematricula.php" method="POST">
                   
-                                  <label for="nomea" class="form-label">Nome Completo do Aluno</label>
-                                  <input type="text" class="form-control" id="nomea">
+                                  <label for="nomea" >Nome Completo do Aluno</label>
+                                  <input type="text" name="nomea" id="nomea" >
                                   
-                                  <label for="idade" class="form-label">Data de Nascimento do Aluno</label>
-                                  <input type="date" class="form-control" id="idade">
+                                  <label for="datan" class="form-label">Data de Nascimento do Aluno</label>
+                                  <input type="date" name="idade" class="form-control" id="datan">
                                   
                                   <label for="nomer" class="form-label">Nome Completo da Mãe (ou Resposável 1)</label>
-                                  <input type="text" class="form-control" id="nomer">
+                                  <input type="text" name="nomer" class="form-control" id="nomer">
           
                                   <label for="nomedois" class="form-label">Nome Completo do Pai (Responsável 2)</label>
-                                  <input type="text" class="form-control" id="nomedois">
+                                  <input type="text" name="nomedois" class="form-control" id="nomedois">
           
                                   <label for="tele" class="form-label">Telefone para Contato</label>
-                                  <input type="tel" class="form-control" id="tele">
+                                  <input type="tel" name="tele" class="form-control" id="tele">
           
                                   <label for="email" class="form-label">E-mail do Responsável 1</label>
-                                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                  <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
                                   <div id="emailHelp" class="form-text">Nunca compartilharemos o seu e-mail com mais ninguém.</div>
                                 <button type="submit" class="btn btn-terceiro">Submit</button>
                                 </form> 
