@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Crescer Sabendo</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="css/home.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/nav.css">
+
+</head>
+<body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <!--Começo do navbar, configurações de responsividade-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+         
+          <a class="navbar-brand" href="home.html" style="text-indent: 30%;"><img src="img/logo.png" alt="Logo" width="102" height="75"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+       
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02" >
+                <ul class="nav" >
+                <li class="nav-item">
+                    <a class="nav-link"  href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Instalações</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Sobre Nós
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Quem Somos</a></li>
+                      <li><a class="dropdown-item" href="#">Fale Conosco</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Doações
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="Doacao.html">Doação de Materiais</a></li>
+                      <li><a class="dropdown-item" href="#">Doações Financeiras</a></li>
+                    </ul>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Parcerias</a>
+                </li>
+                </ul>
+            </div>
+            
+        
+
+        <div>
+              <!-- Chamada ao modal 1- Acessar-->
+             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Acessar
+              </button>
+                <!--Modal-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Acessar página do:</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" >
+                      <button type="button" class="btn btn-primary" href="#">Aluno</button>
+                      <button type="button" class="btn btn-secondary" href="#">Professor</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                        <!-- Chamada ao modal 2 - registrar-->
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+              Registrar
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de:</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body two">
+                    <button type="button" class="btn btn-primary" href="#">Pré-Matrícula</button>
+                    <button type="button" class="btn btn-secondary" href="#">Matrícula</button>
+                    <button type="button" class="btn btn-terceiro" href="#">Enviar Curriculo</button>
+                    <button type="button" class="btn btn-quarto" href="#">Criar Parceria</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </nav>
+    <!--Fim do navbar-->
+
+    <!--Informações sobre a ong-->
+    <section class="header-site">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center">Onde os Sonhos Ganham Vida!!</h1>
+                    <p class="lead text-center">Oferecemos cursos para desenvolver a criatividade e a cordenação motora dos pequenos.</p>
+                    <p class="text-center"> 
+                               
+                    </p>
+                    <p class="text-center">
+                                 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Leva o usuário a página do quem somos-->
+    <section class=" content-site">
+
+        <div class="container text-center">
+            <h2 style="padding-bottom: 20px;">Quem Somos</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card text-center">
+                      
+                        <div class="card-body">
+                            <div class="container2">
+                          <h5 class="card-title center">Card title</h5>
+                          <p class="card-text center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary center">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Formulário de pré-matrícula-->
+            <div class="container text-center">
+              <h2 style="padding-bottom: 20px; padding-top: 20px;">Quem Somos</h2>
+              <div class="row">
+                  <div class="col-12">
+                      <div class="card text-center">
+                        
+                          <div class="card-body two">
+                              <div class="container2" style="padding: 40px 20px;">
+                                <form action="https://formsubmit.co/bianovais08@gmail.com" method="POST">
+                  
+                                  <label for="nomea" class="form-label">Nome Completo do Aluno</label>
+                                  <input type="text" class="form-control" id="nomea">
+                                  
+                                  <label for="idade" class="form-label">Data de Nascimento do Aluno</label>
+                                  <input type="date" class="form-control" id="idade">
+                                  
+                                  <label for="nomer" class="form-label">Nome Completo da Mãe (ou Resposável 1)</label>
+                                  <input type="text" class="form-control" id="nomer">
+          
+                                  <label for="nomedois" class="form-label">Nome Completo do Pai (Responsável 2)</label>
+                                  <input type="text" class="form-control" id="nomedois">
+          
+                                  <label for="tele" class="form-label">Telefone para Contato</label>
+                                  <input type="tel" class="form-control" id="tele">
+          
+                                  <label for="email" class="form-label">E-mail do Responsável 1</label>
+                                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                  <div id="emailHelp" class="form-text">Nunca compartilharemos o seu e-mail com mais ninguém.</div>
+                                <button type="submit" class="btn btn-terceiro">Submit</button>
+                                </form> 
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+    </section>
+</body>
+</html>
