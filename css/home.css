@@ -2,7 +2,7 @@ body{
     background: #fff9e7;
 }
 .header-site{
-    background-image: url(../img/inicio.jpg);
+    background-image: url(../img/img_Home/inicio.jpg);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,11 +11,15 @@ body{
     padding: 15% 15%;
 }
 
-.content-site{
-    padding-top: 100px;
-    padding-bottom: 100px;
+.aviso-site{
+  background-image: url(../img/img_Home/aviso.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-attachment: fixed;
+  color: #000000;
+  padding: 20% 20%;
 }
-
 
 .btn.btn-primary{
     background: #afcd53;
@@ -24,7 +28,7 @@ body{
     box-shadow: 0 3px 0 rgba(0, 0, 0, .3),
                 0 2px 7px rgba(0, 0, 0, 0.2);
     color: #fff;
-    text-align:start;
+    text-align:center;
     text-transform: uppercase;
     position: relative;
 
@@ -83,7 +87,7 @@ body{
    }
 
   .btn.btn-quarto{
-    background: #9bdaff;
+    background: #9bbbff;
     border: 1px solid #CCCCCE;
     border-radius: 20;
     box-shadow: 0 3px 0 rgba(0, 0, 0, .3),
@@ -119,8 +123,25 @@ body{
     background: #ff9bd7;
   }
 
+  .card-body.three{
+    background: #9bbbff;
+  }
+
+  .content-site{
+    font-family: system-ui, 'Segoe UI', 'Open Sans';
+  }
+
   .container2{
     background: #ffffff;
   }
+
+  .slider-container{
+    height: 450px;
+    margin: 0;
+    align-items: center;
+    justify-items: center;
+  }
+
+
   
   

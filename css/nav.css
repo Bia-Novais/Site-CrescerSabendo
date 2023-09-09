@@ -19,7 +19,7 @@ body{
   .nav-link{
     color: #2c4156;
     font-size: 20px;
-    font-family: "Baloo";
+    font-family:system-ui,  'Segoe UI',  'Open Sans';;
   }
 
 
