@@ -1,24 +1,12 @@
-body{
-    background: #fff9e7;
-}
-.header-site{
-    background-image: url(../img/img_Home/inicio.jpg);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #000000;
-    padding: 15% 15%;
-}
 
 .aviso-site{
-  background-image: url(../img/img_PreMatricula/banner_matricula1.png);
+  background-image: url(../img/img_Home/aviso.png);
   background-position: center top;
   background-repeat: no-repeat;
-  background-size:cover;
-  
+  background-size:contain;
+  background-attachment: fixed;
   color: #000000;
-  padding: 17% 20%;
+  padding: 20% 20%;
 }
 
 .btn.btn-primary{
@@ -78,7 +66,7 @@ body{
   }
   
   .btn.btn-terceiro:active{
-    background: #ff9bd7;
+    background: #ff9946;
     text-align: center;
     border: 1px solid #CCCCCE;
     box-shadow: inset 0 0 7px rgba(0, 0, 0, .2);
@@ -119,7 +107,10 @@ body{
     background: #afcd53;
   }
 
-  
+  .card-body.two{
+    background: #ff9bd7;
+  }
+
   .card-body.three{
     background: #9bbbff;
   }
@@ -130,7 +121,6 @@ body{
 
   .container2{
     background: #ffffff;
-    height: 200px;
   }
 
   .slider-container{
@@ -139,5 +129,3 @@ body{
     align-items: center;
     justify-items: center;
   }
-
-  

@@ -1,0 +1,346 @@
+:root {
+  --bg-color: #fff9e7;
+  --secondary-bg-color: #fff9e7;
+  --primary-color: #000000;
+  --secondary-color: #afcd53;
+  --text-color: #8789af;
+  --border-color: #CCCCCE;
+}
+
+#checkout-page {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+
+/* Message */
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#fade .spinner-border {
+  width: 60px;
+  height: 60px;
+}
+
+.hide {
+  display: none !important;
+}
+
+#message {
+  width: 40%;
+}
+
+.alert.alert-light p {
+  border-bottom: 1px solid #333;
+  padding: 1.2em 0;
+}
+
+/* Steps */
+#order-form-container {
+  padding: 1.5em;
+}
+
+#steps {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.step i {
+  background-color: var(--secondary-bg-color);
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+.step .active {
+  background-color: var(--secondary-color);
+}
+
+.step p {
+  color: var(--text-color);
+}
+
+.line {
+  border-bottom: 1px solid var(--border-color);
+  position: absolute;
+  top: 22.5px;
+  width: 90%;
+  left: 5%;
+  z-index: -1;
+}
+
+/* Form header */
+#form-header p {
+  color: var(--text-color);
+}
+
+/* Form */
+#order-form-container {
+  max-width: 700px;
+}
+
+#order-form-container input,
+#order-form-container select {
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  color: var(--primary-color);
+}
+
+#order-form-container select {
+  padding: 1rem 0.75rem;
+}
+
+#order-form-container label {
+  color: var(--text-color);
+}
+
+#order-form-container input:disabled,
+#order-form-container select:disabled {
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
+}
+
+#order-form-container input:focus {
+  border-color: var(--secondary-color);
+}
+
+#order-form-container .form-floating > label {
+  left: 1em;
+}
+#order-form-container textarea {
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  color: var(--primary-color);
+  resize: vertical; /* Permite que o campo de descrição seja redimensionado verticalmente */
+}
+#order-form-container textarea:focus {
+  border-color: var(--secondary-color);
+}
+.container .wrapper{
+  position: relative;
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  background: #fff9e7;
+  border: 2px dashed #c2cdda;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.wrapper.active{
+  border: none;
+}
+.wrapper .image{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.wrapper .icon{
+  font-size: 100px;
+  color: #25cc88;
+}
+.wrapper .text{
+  font-size: 20px;
+  font-weight: 500;
+  color: #5B5B7B;
+}
+.wrapper #cancel-btn i{
+  position: absolute;
+  font-size: 20px;
+  right: 15px;
+  top: 15px;
+  color: #25cc88;
+  cursor: pointer;
+  display: none;
+}
+.wrapper.active:hover #cancel-btn i{
+  display: block;
+}
+.wrapper #cancel-btn i:hover{
+  color: #e74c3c;
+}
+.wrapper .file-name{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 18px;
+  color: #fff;
+  display: none;
+  background: linear-gradient(135deg,#25cc88 0%,#9658fe 100%);
+}
+.wrapper.active:hover .file-name{
+  display: block;
+}
+.btn.btn-primary{
+  background: #afcd53;
+  border: 1px solid #CCCCCE;
+  border-radius: 20;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .3),
+              0 2px 7px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align:center;
+  text-transform: uppercase;
+  position: relative;
+
+}
+ 
+
+ .btn.btn-primary:active{
+  background: #afcd53;
+  text-align: center;
+  border: 1px solid #CCCCCE;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, .2);
+  top: 4px;
+ }
+
+ .btn.btn-secondary{
+  background: #ff9946;
+  border: 1px solid #CCCCCE;
+  border-radius: 20;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .3),
+              0 2px 7px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align:start;
+  text-transform: uppercase;
+  position: relative;
+
+}
+ 
+
+ .btn.btn-secondary:active{
+  background: #ff9946;
+  text-align: center;
+  border: 1px solid #CCCCCE;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, .2);
+  top: 4px;
+ }
+
+ .btn.btn-terceiro{
+  background: #ff9bd7;
+  border: 1px solid #CCCCCE;
+  border-radius: 20;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .3),
+              0 2px 7px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+
+}
+
+.btn.btn-terceiro:active{
+  background: #ff9946;
+  text-align: center;
+  border: 1px solid #CCCCCE;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, .2);
+  top: 4px;
+  color: #fff;
+ }
+
+.btn.btn-quarto{
+  background: #9bbbff;
+  border: 1px solid #CCCCCE;
+  border-radius: 20;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .3),
+              0 2px 7px rgba(0, 0, 0, 0.2);
+  color: #FFF;
+  text-transform: uppercase;
+  position: relative;
+
+}
+
+.btn.btn-quarto:active{
+background: #9bbbff;
+border: 1px solid #CCCCCE;
+box-shadow: inset 0 0 7px rgba(0, 0, 0, .2);
+top: 4px;
+color: #fff;
+}
+
+.container #custom-btn{
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: linear-gradient(135deg,#25cc88 0%,#69afff 100%);
+}
+#order-form-container textarea {
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  color: var(--primary-color);
+  resize: vertical; /* Permite que o campo de descrição seja redimensionado verticalmente */
+}
+#save-btn {
+  background-color: #25cc88;
+  border: none;
+  height: 3em;
+  width: 8em;
+  border-radius: 1.5em;
+}
+.modal-body.two {
+  height: 20vh;
+  display: flex;
+  padding: 0 4em;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-body{
+  background: #afcd53;
+  border-radius: 10px; 
+}
+
+
+.container2{
+  background: #ffffff;
+  
+}
+
+
+/* Responsive */
+@media (min-width: 500px) {
+  #save-btn {
+    width: 8em;
+  }
+}
