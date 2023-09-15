@@ -1,15 +1,14 @@
 <?php
   //Variáveis
-  $nome = $_POST['nomea'];
-  $dtnasc = $_POST['datan'];
-  $nomer = $_POST['nomer'];
-  $nomedois = $_POST['nomedois'];
-  $teleone = $_POST['tele'];
+  $nome = $_POST['nomecri'];
+  $dtnasc = $_POST['asc'];
+  $nomer = $_POST['nomeres'];
+  $teleone = $_POST['telefone'];
   $email = $_POST['email'];
   $data_envio = date('d/m/Y');
   $hora_envio = date('H:i:s');
 
-  //Compo E-mail
+  //Campo E-mail
   $arquivo = "
     <html>
       <p><b>Nome: </b>$nome</p>
@@ -34,5 +33,5 @@
   //Enviar
   mail($destino, $assunto, $arquivo, $headers);
   
-  echo "<meta http-equiv='refresh' content='10;URL=../contato.html'>";
+  echo "<meta http-equiv='refresh' content='10;URL=../Home.html'>";
 ?>
