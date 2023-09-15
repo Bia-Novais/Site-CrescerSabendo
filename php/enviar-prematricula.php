@@ -8,7 +8,7 @@
   $data_envio = date('d/m/Y');
   $hora_envio = date('H:i:s');
 
-  //Campo E-mail
+  //Compo E-mail
   $arquivo = "
     <html>
       <p><b>Nome: </b>$nome</p>
@@ -33,5 +33,5 @@
   //Enviar
   mail($destino, $assunto, $arquivo, $headers);
   
-  echo "<meta http-equiv='refresh' content='10;URL=../Home.html'>";
+  echo "<meta http-equiv='refresh' content='10;URL=../contato.html'>";
 ?>

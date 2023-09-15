@@ -1,10 +1,10 @@
 :root {
   --bg-color: #fff9e7;
-  --secondary-bg-color: #fff9e7;
+  --secondary-bg-color: #ffffff;
   --primary-color: #000000;
-  --secondary-color: #afcd53;
+  --secondary-color: #FF66C4;
   --text-color: #8789af;
-  --border-color: #CCCCCE;
+  --border-color: #cccc;
 }
 
 #checkout-page {
@@ -90,7 +90,20 @@
   left: 5%;
   z-index: -1;
 }
-
+.header-site{
+  background-image: url(../img/img_Doacao/inicio2.jpeg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #000000;
+  padding: 15% 15%;
+}
+.container-custom {
+  background: linear-gradient(135deg,#e8f0f4 14%,#B6DBED 100%);
+  border-radius: 10px; 
+  padding: 20px; 
+}
 /* Form header */
 #form-header p {
   color: var(--text-color);
@@ -103,7 +116,7 @@
 
 #order-form-container input,
 #order-form-container select {
-  background-color: var(--bg-color);
+  background-color: var(--secondary-bg-color);
   border: 2px solid var(--border-color);
   color: var(--primary-color);
 }
@@ -130,21 +143,24 @@
   left: 1em;
 }
 #order-form-container textarea {
-  background-color: var(--bg-color);
+  background-color: var(--secondary-bg-color) !important; 
   border: 2px solid var(--border-color);
   color: var(--primary-color);
-  resize: vertical; /* Permite que o campo de descrição seja redimensionado verticalmente */
+  resize: vertical; 
 }
+
 #order-form-container textarea:focus {
   border-color: var(--secondary-color);
 }
+
+
 .container .wrapper{
   position: relative;
   height: 300px;
   width: 100%;
   border-radius: 10px;
-  background: #fff9e7;
-  border: 2px dashed #c2cdda;
+  background: #ffffff;
+  border: 2px dashed #edadca;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,7 +214,7 @@
   font-size: 18px;
   color: #fff;
   display: none;
-  background: linear-gradient(135deg,#25cc88 0%,#9658fe 100%);
+  background: linear-gradient(135deg,#B6DBED 0%,#AFCD53 100%);
 }
 .wrapper.active:hover .file-name{
   display: block;
@@ -302,7 +318,7 @@ color: #fff;
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
-  background: linear-gradient(135deg,#25cc88 0%,#69afff 100%);
+  background: linear-gradient(135deg,#AFCD53 0%,#B6DBED 100%);
 }
 #order-form-container textarea {
   background-color: var(--bg-color);
@@ -311,7 +327,7 @@ color: #fff;
   resize: vertical; /* Permite que o campo de descrição seja redimensionado verticalmente */
 }
 #save-btn {
-  background-color: #25cc88;
+  background: linear-gradient(135deg,#AFCD53 0%,#B6DBED 100%);
   border: none;
   height: 3em;
   width: 8em;
@@ -335,6 +351,63 @@ color: #fff;
 .container2{
   background: #ffffff;
   
+}
+.counter {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+}
+
+#count {
+  font-weight: bold;
+  animation: countUp 5s ease-out;
+}
+
+@keyframes countUp {
+  0% {
+      transform: scale(1);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}.counter {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+}
+
+#count {
+  font-weight: bold;
+  animation: countUp 5s ease-out;
+}
+
+.blink {
+  animation: blink 1s infinite; /* Adiciona a animação de piscar */
+}
+
+@keyframes countUp {
+  0% {
+      transform: scale(1);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 
