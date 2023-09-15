@@ -21,97 +21,100 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
     </script>
     <!--Começo do navbar, configurações de responsividade-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-         
-          <a class="navbar-brand" href="Home.html" >
-            <img src="img/img_Home/log.png" alt="Logo" width="110" height="70"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
        
+        <a class="navbar-brand" href="Home.html" >
+          <img src="img/img_Home/log.png" alt="Logo" width="110" height="70"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+     
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02" >
-                <ul class="nav" >
-                <li class="nav-item">
-                    <a class="nav-link"  href="Home.html">Home</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02" >
+              <ul class="nav" >
+              <li class="nav-item">
+                  <a class="nav-link"  href="Home.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sobre Nós
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="QuemSomos.html">Quem Somos</a></li>
+                    <li><a class="dropdown-item" href="index.html">Fale Conosco</a></li>
+                  </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Sobre Nós
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Quem Somos</a></li>
-                      <li><a class="dropdown-item" href="#">Fale Conosco</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Doações
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="Doacao.html">Doação de Materiais</a></li>
-                      <li><a class="dropdown-item" href="#">Doações Financeiras</a></li>
-                    </ul>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Parcerias</a>
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Doações
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="Doacao.html">Doação de Materiais</a></li>
+                    <li><a class="dropdown-item" href="#">Doações Financeiras</a></li>
+                  </ul>
                 </li>
-                </ul>
-            </div>
-            
-        
+              <li class="nav-item">
+                  <a class="nav-link" href="Parcerias.html">Parcerias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="voluntarios.html">Voluntariados</a>
+            </li>
+              </ul>
+          </div>
+          
+      
 
-        <div>
-              <!-- Chamada ao modal 1- Acessar-->
-             <button type="button" class="btn btn-quarto" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Acessar
-              </button>
-                <!--Modal-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Acessar página do:</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" >
-                      <button type="button" class="btn btn-primary" href="#">Aluno</button>
-                      <button type="button" class="btn btn-secondary" href="#">Professor</button>
-                      <button type="button" class="btn btn-quarto" href="#">Administrador</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-                        <!-- Chamada ao modal 2 - registrar-->
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-              Cadastrar
+      <div>
+            <!-- Chamada ao modal 1- Acessar-->
+           <button type="button" class="btn btn-quarto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Acessar
             </button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <!--Modal-->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de:</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Acessar página do:</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                  <div class="modal-body two">
-                    <button type="button" class="btn btn-terceiro" href="#">Pré-Matrícula</button>
-                    <button type="button" class="btn btn-secondary" href="#">Matrícula</button>
-                    <button type="button" class="btn btn-primary" href="#">Enviar Curriculo</button>
-                    <button type="button" class="btn btn-quarto" href="#">Criar Parceria</button>
+                  <div class="modal-body" >
+                    <button type="button" class="btn btn-primary" href="#">Aluno</button>
+                    <button type="button" class="btn btn-secondary" href="#">Professor</button>
+                    <button type="button" class="btn btn-quarto" href="#">Administrador</button>
                   </div>
                 </div>
               </div>
             </div>
-        </div>
-      </div>
-    </nav>
-    <!--Fim do navbar-->
 
+                      <!-- Chamada ao modal 2 - registrar-->
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            Cadastrar
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de:</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body two">
+                  <a href="PreMatricula.html"><button type="button" class="btn btn-terceiro" >Pré-Matrícula</button></a>
+                  <a href="cadastrar.html"><button type="button" class="btn btn-secondary" >Matrícula</button></a>
+                  <a href="#"><button type="button" class="btn btn-primary" >Enviar Curriculo</button></a>
+                  <a href="Parcerias.html"><button type="button" class="btn btn-quarto" >Criar Parceria</button></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </nav>
+  <!--Fim do navbar-->
 
         
     <section class="aviso-site">
@@ -131,34 +134,46 @@
                                         <h3>Dados do responsavel:</h3>
                                         <label for="nomeres">Nome Completo do responsavel:</label>
                                         <input type="text" name="nomeres" placeholder="Digite seu Nome Completo" autofocus="true" />
-                                        <!-- <label for="rg">RG</label>
+                                        <label for="rg">RG</label>
                                         <input type="text" placeholder="Digite seu RG" />
                                         <label for="CPF">CPF</label>
                                         <input type="text" placeholder="Digite seu CPF" autofocus="true" /> 
                                         <label for="asc">Data de Nascimento</label>
-                                        <input type="date" placeholder="Digite sua Data de Nascimento" autofocus="true" />-->
+                                        <input type="date" placeholder="Digite sua Data de Nascimento" autofocus="true" />
                                         <label for="telefone">Telefone</label>
                                         <input type="tel" name="telefone" placeholder="Digite seu numero de Telefone" autofocus="true" />
-                                       <!--  <label for="celular">Celular</label>
-                                        <input type="tel" placeholder="Digite seu numero de Celular" autofocus="true" /> -->
+                                        <label for="celular">Celular</label>
+                                        <input type="tel" placeholder="Digite seu numero de Celular" autofocus="true" /> 
                                         <label for="email">E-mail</label>
                                         <input type="email" name="email" placeholder="Exemplo@gmail.com" autofocus="true" />
-                                        <!-- <label for="endereco">Endereço</label>
+                                        <label for="endereco">Endereço</label>
                                         <input type="text" placeholder="Ex: Rua Almeida 123, Bairro, São Paulo-SP" autofocus="true" /> 
                                         <label for="CEP">CEP</label>
-                                        <input type="text" placeholder="Digite seu CEP" autofocus="true" />-->
+                                        <input type="text" placeholder="Digite seu CEP" autofocus="true" />
                                         <br>
                                         <h3>Dados da criança:</h3>
                                         <label for="nomecri">Nome Completo da criança:</label>
                                         <input type="text" name="nomecri" placeholder="Digite o Nome Completo" autofocus="true" />
-                                        <!-- <label for="rg">RG</label>
+                                       <label for="rg">RG</label>
                                         <input type="text" placeholder="Digite o RG" />
                                         <label for="CPF">CPF</label>
-                                        <input type="text" placeholder="Digite o CPF" autofocus="true" /> -->
+                                        <input type="text" placeholder="Digite o CPF" autofocus="true" /> 
                                         <label for="asc">Data de Nascimento</label>
                                         <input type="text" name="asc" placeholder="Digite a Data de Nascimento" autofocus="true" />
+
+                                        <label for="sexo">Qual o sexo da criança:</label>
+                                        <label class="caixa">Masculino
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                          </label>
+                                          <label class="caixa">Feminino
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                          </label>
+                                          
+                                        
                             
-                                       <!--  <br>
+                                        <br>
                                         <h3>Dados da informações sobre a Matricula:</h3>
                                         <label for="periodo">Periodo escolhido:</label>
                                         <select class="simple basic">
@@ -168,35 +183,28 @@
                                             <option>Tarde</option>
                                             <option>Indeterminado</option>
                                         </select>
-                                        <br> -->
+                                        <br> 
                             
-                                        <!-- <label for="periodo">Berçario ou Infantil:</label>
+                                        <label for="extra">Atividades Extracurriculares</label>
                                         <select class="simple basic">
                                             <option>Selecione</option>
-                                            <option>Berçario(4 messes a 2 anos)</option>
-                                            <option>Infantil(2 anos a 5 anos e 11 messes)</option>
+                                            <option>Ballet</option>
+                                            <option>Musicalização</option>
+                                            <option>Judo</option>
+                                            <option>Yoga</option>
+                                            <option>Natação</option>
                                         </select>
                                         <br>
-                            
-                                        <label for="Cursos">Cursos extracurriculares escolhidos:</label>
-                                        <label class="caixa">One
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                          </label>
-                                          <label class="caixa">Two
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                          </label>
-                                          <label class="caixa">Three
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                          </label>
-                                          <label class="caixa">Four
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                          </label>
-                                       <br> -->
-                                          
+
+                                        <label for="extra">Aulas </label>
+                                        <select class="simple basic">
+                                            <option>Selecione</option>
+                                            <option>Socioemocional</option>
+                                            <option>Alfabetização</option>
+                                            <option>Literatura</option>
+                                        </select>
+                                        <br>
+                      
                             
                                           <button type="submit" value="Enviar" class="btn btn-terceiro">Enviar</button>
                                     </form>
