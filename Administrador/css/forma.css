@@ -1,0 +1,267 @@
+.box-title .title {
+
+  position: relative;
+  text-align: center;
+  color:#b7ffe3; 
+  font-size:35px; 
+  font-weight:bold;
+  text-transform: uppercase;
+  letter-spacing:15px; 
+  color:#98e2ca;
+  
+  }
+  
+  .box-title .title .subtitle {
+  
+  line-height:2em; 
+  padding-bottom:15px;
+  text-transform: none;
+  font-size:18px;
+  font-weight: normal;
+  font-family: 'open_sanslight';
+  color:#a6a7ff; 
+  letter-spacing:10px; 
+  letter-spacing:none;
+  
+  }
+  
+  .box-title .title:after, .box-title .title:before {
+  
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 45px;
+  height: 4px;
+  content: "";
+  right: 45px; 
+  margin:auto;
+  background-color: #ffffff;
+  
+  }
+  
+  .box-title .title:before { 
+  
+  background-color:#8bb9d7;
+  left:45px; width:90px;
+  
+  }
+  
+  .box-formulario {
+  
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #232323;
+    padding:60px 0;
+  
+  }
+  
+  .formulario {
+  
+    width: 700px;
+    background: #232323;
+    padding: 60px 5%;
+    text-align: center;
+  
+  }
+  
+  
+  .formulario span {
+  position: relative;
+  display: flex;
+  margin: 45px 10px;
+  
+  }
+  
+  /*input Animado*/
+  
+  .input-card {
+  
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0 13px 55px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: #000000;
+  background: #c1f1fa;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  transition: all .3s ease-in-out;
+  
+  }
+  
+  .input-card::-webkit-input-placeholder {
+  
+  color: #242424;
+  font-weight: 300;
+  
+  }
+  
+  .input-card + label {
+  
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  background: #54adf7;
+  color: #ffffff;
+  transition: all .3s ease-in-out;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  transform-origin: right center;
+  transform: perspective(300px) scaleX(1) rotateY(0deg);
+  
+  }
+  
+  
+  .input-card:focus,
+  .input-card:active {
+  
+  color: #000000;
+  padding: 10px 0 13px 10px;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  
+  }
+  
+  .input-card:focus::-webkit-input-placeholder,
+  .input-card:active::-webkit-input-placeholder {
+  color: #aaa;
+  }
+  
+  .input-card:focus + label,
+  .input-card:active + label {
+  transform: perspective(600px) translateX(-100%) rotateY(75deg);
+  }
+  
+  
+  /*TextArea*/
+  .textarea-card {
+  
+  display: inline-block;
+  width: 100%;
+  height: 87px;
+  padding: 10px 0 13px 55px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: #6892d1;
+  background: #ffffff;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  transition: all .3s ease-in-out;
+  
+  }
+  
+  .textarea-card::-webkit-input-placeholder {
+  
+  color: #5fcec5;
+  font-weight: 300;
+  
+  }
+  
+  .textarea-card + label {
+  
+  height: 87px;
+  line-height: 66px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  text-shadow: 0 1px 0 rgba(53, 209, 199, 0.4);
+  background: #9bd2ff;
+  color: #ffffff;
+  transition: all .3s ease-in-out;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  transform-origin: right center;
+  transform: perspective(300px) scaleX(1) rotateY(0deg);
+  
+  }
+  
+  
+  .textarea-card:focus,
+  .textarea-card:active {
+  
+  color: #83ddf3;
+  padding: 10px 0 13px 10px;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  
+  }
+  
+  .textarea-card:focus::-webkit-input-placeholder,
+  .textarea-card:active::-webkit-input-placeholder {
+  color: #aaa;
+  }
+  
+  .textarea-card:focus + label,
+  .textarea-card:active + label {
+  transform: perspective(600px) translateX(-100%) rotateY(75deg);
+  }
+  
+  /*Botão*/
+  .btn-submit {
+  
+  color: #fff;
+  background: #a4c1ff;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  transition: 0.5s;
+  width: 100%;
+  padding: 0.5em 1em;
+  font-size: 1.3em;
+  font-weight: bold;
+  float: left;
+  
+  }
+  .btn-reset {
+  
+  color: #fff;
+  background: #a4c1ff;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  transition: 0.5s;
+  width: 100%;
+  padding: 0.5em 1em;
+  font-size: 1.3em;
+  font-weight: bold;
+  float: left;
+  
+  }
+  
+  .btn-volt {
+  
+  color: #fff;
+  background: #7cdef0;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  transition: 0.5s;
+  width: 100%;
+  padding: 0.5em 1em;
+  font-size: 1.3em;
+  font-weight: bold;
+  float: left;
+  }
+  
+  .btn-submit:hover {
+  
+  background-color:#6ba5f1;
+  
+  }
+  .btn-reset:hover {
+  
+  background-color:#5abdff;
+}    
