@@ -129,3 +129,24 @@ addressForm.addEventListener("submit", (e) => {
     toggleDisabled();
   }, 1000);
 });
+
+const countElement = document.getElementById("count");
+    const finalCount = 20000;
+    const duration = 10000; // Duração da animação em milissegundos
+    const interval = 50; // Intervalo de atualização em milissegundos
+    const step = finalCount / (duration / interval);
+    let currentCount = 0;
+
+    const updateCount = () => {
+        currentCount += step;
+        if (currentCount >= finalCount) {
+            currentCount = finalCount;
+            clearInterval(counterInterval);
+            countElement.classList.add("blink"); // Adiciona a classe para piscar
+        }
+        countElement.textContent = Math.round(currentCount);
+    };
+
+    const counterInterval = setInterval(updateCount, interval);
+
+
