@@ -4,7 +4,6 @@ body {
     font-family: "Open Sans";
     margin: 2;
     padding: 20;
-    color: #023047
 }
 
 .page {
@@ -12,42 +11,43 @@ body {
     align-items: center;
     align-content: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(#f588d8, #25a8ff);
-    background-size: cover;
 }
 
 
-.formLogin {
+
+.card-body.two{
+    background: #ff9946;
+  }
+
+  .container{
+    width: 65%;
+  }
+
+.formPreM {
     display: flex;
     flex-direction: column;
     background-color: #fff;
     border-radius: 7px;
-    padding: 100px;
+    padding: 50px;
     align-content: center;
     
 }
 
-.areaLogin img {
-    width: 420px;
-}
-
-.formLogin h1 {
+.formPreM h1 {
     padding: 0;
     margin: 0;
     font-weight: 500;
     font-size: 2.3em;
 }
 
-.formLogin p {
+.formPreM p {
     display: inline-block;
     font-size: 14px;
     color: #666;
     margin-bottom: 25px;
 }
 
-.formLogin input {
+.formPreM input {
     padding: 15px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -59,16 +59,16 @@ body {
 }
 
 
-.formLogin input:focus {
-    border: 1px solid #ff95c5;
+.formPreM input:focus {
+    border: 1px solid #ff9946;
 }
 
-.formLogin label {
+.formPreM label {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
-.formLogin a {
+.formPreM a {
     display: inline-block;
     margin-bottom: 20px;
     font-size: 13px;
@@ -76,30 +76,14 @@ body {
     transition: all linear 160ms;
 }
 
-.formLogin a:hover {
-    color: #ff73b2;
-}
-
-.btn {
-    background-color: #ff78b5;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    border: none !important;
-    transition: all linear 160ms;
-    cursor: pointer;
-    margin: 0 !important;
-
-}
-
-.btn:hover {
-    transform: scale(1.05);
-    background-color: #ff0676;
-
+.formPreM a:hover {
+    color: #ff9946;
 }
 
 
-.container {
+
+
+.caixa {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -113,7 +97,7 @@ body {
   }
   
   /* Hide the browser's default checkbox */
-  .container input {
+  .caixa input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -132,13 +116,13 @@ body {
   }
   
   /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
+  .caixa:hover input ~ .checkmark {
     background-color: #ccc;
   }
   
   /* When the checkbox is checked, add a blue background */
-  .container input:checked ~ .checkmark {
-    background-color: #ff6adf;
+  .caixa input:checked ~ .checkmark {
+    background-color: #ff9946;
   }
   
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -149,12 +133,12 @@ body {
   }
   
   /* Show the checkmark when checked */
-  .container input:checked ~ .checkmark:after {
+  .caixa input:checked ~ .checkmark:after {
     display: block;
   }
   
   /* Style the checkmark/indicator */
-  .container .checkmark:after {
+  .caixa .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -175,4 +159,25 @@ body {
     border-radius: 4px;
     transition: all linear 160ms;
     outline: none;
+  }
+
+
+  .btn.btn-secondary{
+    background: #ff9946;
+    border: 1px solid #CCCCCE;
+    border-radius: 20;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3),
+                0 2px 7px rgba(0, 0, 0, 0.2);
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;
+  
+  }
+  
+  .btn.btn-secondary:active{
+  background: #ff9946;
+  border: 1px solid #CCCCCE;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, .2);
+  top: 4px;
+  color: #fff;
   }

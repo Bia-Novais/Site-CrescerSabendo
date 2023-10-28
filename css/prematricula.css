@@ -16,7 +16,7 @@ body {
 
 
 .card-body.two{
-    background: #ff9bd7;
+    background: #9bbbff;
   }
 
   .container{
@@ -60,7 +60,7 @@ body {
 
 
 .formPreM input:focus {
-    border: 1px solid #ff95c5;
+    border: 1px solid #9bbbff;
 }
 
 .formPreM label {
@@ -77,7 +77,7 @@ body {
 }
 
 .formPreM a:hover {
-    color: #ff73b2;
+    color: #9bbbff;
 }
 
 
@@ -122,7 +122,7 @@ body {
   
   /* When the checkbox is checked, add a blue background */
   .caixa input:checked ~ .checkmark {
-    background-color: #ff6adf;
+    background-color: #9bbbff;
   }
   
   /* Create the checkmark/indicator (hidden when not checked) */

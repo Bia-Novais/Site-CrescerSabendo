@@ -90,15 +90,17 @@
   left: 5%;
   z-index: -1;
 }
+
 .header-site{
-  background-image: url(../img/img_Doacao/inicio2.jpeg);
+  background: url(../img/img_Doacao/doacao.png);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   color: #000000;
-  padding: 15% 15%;
+  padding: 13% 15%;
 }
+
 .container-custom {
   background: linear-gradient(135deg,#e8f0f4 14%,#B6DBED 100%);
   border-radius: 10px; 
@@ -214,7 +216,7 @@
   font-size: 18px;
   color: #fff;
   display: none;
-  background: linear-gradient(135deg,#B6DBED 0%,#AFCD53 100%);
+  background: linear-gradient(135deg,#5392da 0%,#9dcbff 100%);
 }
 .wrapper.active:hover .file-name{
   display: block;
@@ -318,7 +320,7 @@ color: #fff;
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
-  background: linear-gradient(135deg,#AFCD53 0%,#B6DBED 100%);
+  background: linear-gradient(135deg,#8299e7 0%,#86d0f5 100%);
 }
 #order-form-container textarea {
   background-color: var(--bg-color);
@@ -327,7 +329,7 @@ color: #fff;
   resize: vertical; /* Permite que o campo de descrição seja redimensionado verticalmente */
 }
 #save-btn {
-  background: linear-gradient(135deg,#AFCD53 0%,#B6DBED 100%);
+  background: linear-gradient(135deg,#8299e7 0%,#86d0f5 100%);
   border: none;
   height: 3em;
   width: 8em;
@@ -352,6 +354,7 @@ color: #fff;
   background: #ffffff;
   
 }
+
 .counter {
   text-align: center;
   font-size: 36px;

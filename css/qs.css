@@ -1,14 +1,16 @@
-
-.aviso-site{
-  background-image: url(../img/img_Home/aviso.png);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-attachment: fixed;
-  color: #000000;
-  padding: 20% 20%;
+body {
+  background-color: #eeb814
 }
 
+.header{
+  background: url(../img/quemsomos/fundo.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #000000;
+  padding: 12% 15%;
+  }
 .btn.btn-primary{
     background: #afcd53;
     border: 1px solid #CCCCCE;

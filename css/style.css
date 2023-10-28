@@ -115,7 +115,7 @@
   
   
   body {
-    background-color: #fffefb;
+    background-color: #fff9e7;
   }
   .ag-courses_box {
     display: -webkit-box;
@@ -203,7 +203,7 @@
     transition: all .5s ease;
   }
   .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
-    background-color: #a5ffb9;
+    background-color: #09be36;
   }
   .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
     background-color: #ffad90;
@@ -356,7 +356,7 @@
   .card__title {
     grid-row: 3/4;
     font-weight: 400;
-    color: #ffffff;
+    color: #000000;
   }
   
   .card__apply {
@@ -367,23 +367,19 @@
   /* CARD BACKGROUNDS */
   
   .card-1 {
-    background: radial-gradient(#1fe4f5, #3fbafe);
+    background: radial-gradient(#d5ee8b, #e7fda6);
   }
   
   .card-2 {
-    background: radial-gradient(#fbc1cc, #fa99b2);
+    background: radial-gradient(#fa99b2, #fa99b2);
   }
   
   .card-3 {
-    background: radial-gradient(#76b2fe, #b69efe);
+    background: radial-gradient(#B6DBED, #B6DBED);
   }
-  
-  .card-4 {
-    background: radial-gradient(#60efbc, #58d5c9);
-  }
-  
+   
   .card-5 {
-    background: radial-gradient(#f588d8, #c0a3e5);
+    background: radial-gradient(#ffc08d, #ffc08d);
   }
   
   /* RESPONSIVE */
@@ -398,24 +394,21 @@
    /* CARD BACKGROUNDS */
   
    .card-11 {
-    background: radial-gradient(#fffd6b, #fda846);
+    background: radial-gradient(#ffedb8, #ffedb8);
   }
   
   .card-22 {
-    background: radial-gradient(#fb88ff, #d21cff);
+    background: radial-gradient(#e8adf7, #e8adf7);
   }
   
   .card-33 {
-    background: radial-gradient(#75e49a, #06e676);
+    background: radial-gradient(#cbfada, #cbfada);
   }
   
   .card-44 {
-    background: radial-gradient(#ff8f99, #ff3a5b);
+    background: radial-gradient(#fdbbd6, #fdbbd6);
   }
   
-  .card-55 {
-    background: radial-gradient(#f588d8, #c0a3e5);
-  }
   
 
 
