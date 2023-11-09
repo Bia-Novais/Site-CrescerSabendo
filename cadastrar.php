@@ -114,6 +114,13 @@
     <!--Fim do navbar-->
 
         
+    <script>
+    function funcao1()
+        {
+        alert("Registros alterados com sucesso!!!");
+        }
+    </script>
+
     <!-- -->
     <?php
       if( isset($_FILES["arquivo"])  && !empty($_FILES["arquivo"]))
@@ -274,11 +281,13 @@
                                         <?php
                                               }
                                           ?>
+                                          
+                                          <font face="Helvetica"> <button name="btgravar" type="submit" onclick="funcao1()" value="Enviar" class="btn btn-secondary">Enviar</button></font>
 
                                         <br>
                                         </select></div></div>
                                         <br>
-                                        <font face="Helvetica"> <button name="btgravar" type="submit" value="Enviar" class="btn btn-secondary">Enviar</button></font>
+                                        
                                           
                                     
 
@@ -317,13 +326,11 @@
                                         $probr->setId_usuario($codusu);
                                         echo "<h3><br><br>".$probr->alterar2()."</h3>";
 
-                                        header("location:AlterarEditora.php");
+                                       
                                     }
                                    ?>
 
-                                  
-                                  <a href = 'index.php'><button type="submit" class="btn btn-primary" >Home</button></a>
-                               
+                                
 
                                 </div>
                             </div>
