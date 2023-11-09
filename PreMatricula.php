@@ -122,84 +122,117 @@
                          <div class="card-body two">
                                     <form action=".../mailer/enviar-prematricula.php" method="post" class="formPreM">
                                         
+                                    
                                     <font face = "Helvetica"> <p>O objetivo da pré-matrícula é avaliar as condições do aluno que deseja integrar a nossa ONG, 
                                         uma vez que o nosso objetivo é ajudar as crianças que não têm acesso a uma boa educação a encontrar uma educação de qualidade.
                                         Por conseguinte, assim que tivermos avaliado as informações fornecidas, enviaremos uma resposta através do endereço eletrónico (o e-mail) indicado no formulário.
                                         Se for aprovado, será encaminhado para uma nova página para completar a matrícula.</p></font>
-                                        <h3><font face = "Helvetica">Dados do responsavel</font>:</h3>
-                                        <label for="nomeres"><font face = "Helvetica">Nome Completo do responsavel:</font></label>
-                                        <input type="text" name="nomeres" placeholder="Digite seu Nome Completo" autofocus="true" />
-                                        <label for="rg"><font face = "Helvetica">RG</font></label>
-                                        <input type="text" name="rg" placeholder="Digite seu RG" />
-                                        <!-- <label for="CPF">CPF</label>
-                                        <input type="text" placeholder="Digite seu CPF" autofocus="true" /> 
-                                        <label for="asc">Data de Nascimento</label>
-                                        <input type="date" placeholder="Digite sua Data de Nascimento" autofocus="true" />
-                                        <label for="telefone">Telefone</label>
-                                        <input type="tel" name="telefone" placeholder="Digite seu numero de Telefone" autofocus="true" />
-                                        <label for="celular">Celular</label>
-                                        <input type="tel" placeholder="Digite seu numero de Celular" autofocus="true" />  -->
-                                        <label for="email"><font face = "Helvetica">E-mail</font></label>
-                                        <input type="email" name="email" placeholder="Exemplo@gmail.com" autofocus="true" />
-                                       <!--  <label for="endereco">Endereço</label>
-                                        <input type="text" placeholder="Ex: Rua Almeida 123, Bairro, São Paulo-SP" autofocus="true" /> 
-                                        <label for="CEP">CEP</label>
-                                        <input type="text" placeholder="Digite seu CEP" autofocus="true" />
-                                        <br> -->
+                                        
+                                          
                                         <h3><font face = "Helvetica">Dados da criança:</font></h3>
                                         <label for="nomecri"><font face = "Helvetica">Nome Completo da criança:</font></label>
                                         <input type="text" name="nomecri" placeholder="Digite o Nome Completo" autofocus="true" />
-                                       <!--<label for="rg">RG</label>
+                                        <label for="rg">RG</label>
                                          <input type="text" placeholder="Digite o RG" />
                                         <label for="CPF">CPF</label>
                                         <input type="text" placeholder="Digite o CPF" autofocus="true" /> 
                                         <label for="asc">Data de Nascimento</label>
                                         <input type="text" name="asc" placeholder="Digite a Data de Nascimento" autofocus="true" />
 
+                                       
                                         <label for="sexo">Qual o sexo da criança:</label>
-                                        <label class="caixa">Masculino
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                          </label>
-                                          <label class="caixa">Feminino
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                          </label>
+                                          <div class="form-check">
+                                            <input class="check" type="radio" name="sexo" id="M" checked>
+                                            <label class="check" for="M">
+                                             Masculino
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="check" type="radio" name="sexo" id="F">
+                                            <label class="check" for="F">
+                                             Feminino
+                                            </label>
+                                          </div>
+
+                                          <label for="irmao">A criança tem irmão matriculado em escola municipal de educação infantil?</label>
+                                          <div class="form-check">
+                                            <input class="check" type="radio" name="irmao" id="S" checked>
+                                            <label class="check" for="S">
+                                             Sim
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="check" type="radio" name="irmao" id="N" >
+                                            <label class="check" for="N">
+                                             Não
+                                            </label>
+                                          </div>
+
                                           
+                                        
+                                        <h3><font face = "Helvetica">Dados do responsável</font>:</h3>
+                                        <label for="nomeres"><font face = "Helvetica">Nome Completo do responsavel:</font></label>
+                                        <input type="text" name="nomeres" placeholder="Digite seu Nome Completo" autofocus="true" />
+                                        <label for="rg"><font face = "Helvetica">RG</font></label>
+                                        <input type="text" name="rg" placeholder="Digite seu RG" />
+                                        <label for="CPF">CPF</label>
+                                        <input type="text" placeholder="Digite seu CPF" autofocus="true" /> 
+                                        <label for="asc">Data de Nascimento</label>
+                                        <input type="date" placeholder="Digite sua Data de Nascimento" autofocus="true" />
+                                        <label for="telefone">Telefone</label>
+                                        <input type="tel" name="telefone" placeholder="Digite seu numero de Telefone" autofocus="true" />
+                                        <label for="celular">Celular</label>
+                                        <input type="tel" placeholder="Digite seu numero de Celular" autofocus="true" />  
+                                        <label for="email"><font face = "Helvetica">E-mail</font></label>
+                                        <input type="email" name="email" placeholder="Exemplo@gmail.com" autofocus="true" />
+                                        <label for="CEP">CEP</label>
+                                        <input type="text" placeholder="Digite seu CEP" autofocus="true" />
+                                        <label for="endereco">Endereço</label>
+                                        <input type="text" placeholder="Ex: Rua Almeida 123, Bairro, São Paulo-SP" autofocus="true" /> 
+                                       
+
+                                        <label for="salario">Faixa salarial do responsável:</label>
+                                        <select class="simple basic" name="salario">
+                                            <option value="salario">Selecione</option>
+                                            <option value="1320">R$ 1.320 ao mês</option><br>
+                                            <option valeu="1320a2640">De R$ 1.320 a R$ 2.640 ao mês</option>
+                                            <option value="mais2640">Mais de R$ 2.640 ao mês </option>
+                                        </select>
+                                        <br> 
+                                        
                                         
                             
                                         <br>
                                         <h3>Dados da informações sobre a Matricula:</h3>
-                                        <label for="periodo">Periodo escolhido:</label>
+                                        <label for="periodo">Série:</label>
                                         <select class="simple basic">
                                             <option>Selecione</option>
-                                            <option>Integral</option>
-                                            <option>Manhã</option>
-                                            <option>Tarde</option>
-                                            <option>Indeterminado</option>
+                                            <option>Berçário 1    ( A partir de 3 meses a 1 ano)</option><br>
+                                            <option>Berçário 2    ( De 1 a 2 anos)</option>
+                                            <option>Maternal      ( De 2 a 4 anos)</option>
+                                            <option>Pré-Escola 1  ( De 4 a 5 anos)</option>
                                         </select>
                                         <br> 
                             
                                         <label for="extra">Atividades Extracurriculares</label>
-                                        <select class="simple basic">
-                                            <option>Selecione</option>
-                                            <option>Ballet</option>
-                                            <option>Musicalização</option>
-                                            <option>Judo</option>
-                                            <option>Yoga</option>
-                                            <option>Natação</option>
+                                        <select class="simple basic" name="extra">
+                                            <option value="extra">Selecione</option>
+                                            <option value="ballet">Ballet</option>
+                                            <option value="musicalizacao">Musicalização</option>
+                                            <option value="judo">Judo</option>
+                                            <option value="yoga">Yoga</option>
+                                            <option value="natacao">Natação</option>
                                         </select>
                                         <br>
 
                                         <label for="extra">Aulas </label>
-                                        <select class="simple basic">
-                                            <option>Selecione</option>
-                                            <option>Socioemocional</option>
-                                            <option>Alfabetização</option>
-                                            <option>Literatura</option>
+                                        <select class="simple basic" name="aulas">
+                                            <option value="aulas">Selecione</option>
+                                            <option value="socioemocional">Socioemocional</option>
+                                            <option value="alfabetizacao">Alfabetização</option>
+                                            <option value="literatura">Literatura</option>
                                         </select>
                                         <br>
-                       -->
                             
                        <font face = "Helvetica"> <button type="submit" value="Enviar" class="btn btn-quarto">Enviar</button></font>
                                     </form>

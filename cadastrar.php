@@ -114,102 +114,220 @@
     <!--Fim do navbar-->
 
         
+    <!-- -->
+    <?php
+      if( isset($_FILES["arquivo"])  && !empty($_FILES["arquivo"]))
+      {
+        $arquivo =  "./imgbanco/".$_FILES["arquivo"]["name"];
+        move_uploaded_file($_FILES["arquivo"]["tmp_name"], $arquivo);
+      }
+    ?>
+    <?php
+      if( isset($_FILES["residencia"])  && !empty($_FILES["residencia"]))
+      {
+
+        $residencia =  "./imgbanco/".$_FILES["residencia"]["name"];
+        move_uploaded_file($_FILES["residencia"]["tmp_name"], $residencia);
+      }
+    ?>
+
+
+                <?php
+                    $codcri = $_POST["codcri"];
+                    $codres = $_POST["codres"];
+                    include_once 'php/Aluno.php';//Enviam o parâmetro para a instâcia, para a 
+                    $p = new Aluno();            //execução de método alterar.
+                    $p->setId_aluno($codcri);  
+                    $p->setId_responsavel($codres); 
+                    $pro_bd=$p->alterar();//Chamada de método com retorno - o $p é o parâmetro enviado.
+                    //print_r($pro_bd);
+
+                    $codusu = $_POST['codusu'];
+                    include_once 'php/Responsavel.php';
+                    $r = new Responsavel();    
+                    //echo $codres;
+                    $p->setId_responsavel($codres); 
+                    $r->setId_usuario($codusu); 
+
+                    //print_r($r->getId_usuario());
+                    $pro_br=$r->alterar();
+                    //print_r($pro_br);
+                    
+                ?>
+
+              
+    
     
         <!--Formulário da matrícula-->
         <h2 style="padding-top: 5%; color: #636363; font-family: 'Script'; " class="text-center">Cadastro da Matrícula</h2>
             <div class="container">
                       <div class="card">
                          <div class="card-body two">
-                                    <form method="post" class="formPreM">
-                                        
+                                    <form action="./cadastrar.php" method="post" class="formPreM" enctype="multipart/form-data">
+                                      
+                                      <?php
+                                          foreach($pro_bd as $pro_mostrar)
+                                          {
+                                              //Através da propriedade "value" as caixas receberão o valor respectivo ao retorno do "Foreach".
+                                      ?>
+
                                         <p>A matrícula de um aluno em nossa ONG é um passo importante na jornada educacional da criança e um momento
                                            significativo para os pais. Esse processo envolve preencher formulários, fornecer documentos necessários,
                                            como certidão de nascimento e comprovante de residência, além de informações de contato.
                                            Após a matrícula, a ONG se torna um ambiente acolhedor e seguro para o desenvolvimento da criança, 
                                            proporcionando cuidados, aprendizado e interação social fundamentais em seus primeiros anos de vida.</p>
                                            <br><br>
-                                        <h3>Dados do responsavel:</h3>
-                                        <label for="nomeres">Nome Completo:</label>
-                                        <input type="text" name="nomeres" placeholder="Digite seu Nome Completo" required/>
-                                        <label for="rg">RG:</label>
-                                        <input type="text" name="rg" placeholder="Digite seu RG"  required/>
-                                        <label for="CPF">CPF:</label>
-                                        <input type="text" placeholder="Digite seu CPF" required /> 
-                                        <label for="asc">Data de Nascimento:</label>
-                                        <input type="date" placeholder="Digite sua Data de Nascimento"  required />
-                                        <label for="telefone">Telefone:</label>
-                                        <input type="tel" name="telefone" placeholder="Digite seu numero de Telefone" required />
-                                        <label for="celular">Celular:</label>
-                                        <input type="tel" placeholder="Digite seu numero de Celular" required />  
-                                        <label for="email">E-mail:</label>
-                                        <input type="email" name="email" placeholder="Exemplo@gmail.com" required />
-                                        <label for="endereco">Endereço:</label>
-                                        <input type="text" placeholder="Ex: Rua Almeida 123, Bairro, São Paulo-SP" required />
-                                        <label for="residência">Anexa o comprovante de residência</label>
-                                        <input type="file" name="arquivo" id="arquivo" class="campo" required>  
-                                        <label for="CEP">CEP</label>
-                                        <input type="text" placeholder="Digite seu CEP" required />
-                                        <br> 
-                                        <h3>Dados da criança:</h3>
+                                       
+                                        <h3>Dados da Criança:</h3>
+                                        <label for="codcri">Código da Criança: <?php echo $pro_mostrar[0]; ?></label>
+                                        <input type="hidden" name="codcri" value='<?php echo $pro_mostrar[0]?>'>
+                                       
                                         <label for="nomecri">Nome Completo da criança:</label>
-                                        <input type="text" name="nomecri" placeholder="Digite o Nome Completo" required />
+                                        <input type="text" name="nomecri" value='<?php echo $pro_mostrar[1]?>' required>
                                        <label for="rg">RG:</label>
-                                         <input type="text" placeholder="Digite o RG" />
-                                        <label for="CPF">CPF:</label>
-                                        <input type="text" placeholder="Digite o CPF" /> 
-                                        
-                                        <label for="sexo">Qual o sexo da criança:</label>
-                                        <br>
-                                        <label class="caixa">Masculino
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                          </label>
-                                          <label class="caixa">Feminino
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                          </label>
-                                          
-                                          <label for="Nascimento">Anexa imagem da certidão de Nascimento</label>
-                                          <input type="file" name="arquivo" id="arquivo" class="campo" required>   
-                                        
-                            
-                                        <br>
-                                        <h3>Dados da informações sobre a Matricula:</h3>
-                                        <label for="periodo">Periodo escolhido:</label>
-                                        <select class="simple basic">
-                                            <option>Selecione</option>
-                                            <option>Integral</option>
-                                            <option>Manhã</option>
-                                            <option>Tarde</option>
-                                            <option>Indeterminado</option>
-                                        </select>
-                                        <br> 
-                            
-                                        <label for="extra">Atividades Extracurriculares</label>
-                                        <select class="simple basic">
-                                            <option>Selecione</option>
-                                            <option>Ballet</option>
-                                            <option>Musicalização</option>
-                                            <option>Judo</option>
-                                            <option>Yoga</option>
-                                            <option>Natação</option>
-                                        </select>
-                                        <br>
+                                         <input type="text" name="rg"  value='<?php echo $pro_mostrar[2]?>' required>
+                                        <label for="cpf">CPF:</label>
+                                        <input type="text" name="cpf" id="cpf" value='<?php echo $pro_mostrar[3]?>' required /> 
 
-                                        <label for="extra">Aulas </label>
-                                        <select class="simple basic">
-                                            <option>Selecione</option>
-                                            <option>Socioemocional</option>
-                                            <option>Alfabetização</option>
-                                            <option>Literatura</option>
-                                        </select>
+                                        <label for="datacri">Data de Nascimento:</label>
+                                        <input type="date" name="datacri" id="datacri" value='<?php echo $pro_mostrar[4]?>'   required />
+
+                                        
+                                      
+                                        <label for="sexo">Qual o sexo da criança:</label>
+                                        <div for="sexo" value='<?php echo $pro_mostrar[5]?>'>
+                                          <div class="form-check">
+                                            <input class="check" type="radio" name="sexo" id="M" value="M">
+                                            <label class="check" for="M">
+                                             Masculino
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="check" type="radio" name="sexo" id="F" value="F">
+                                            <label class="check" for="F">
+                                             Feminino
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <label for="arquivo">Anexa imagem da certidão de Nascimento</label>
+                                          <input type="file" name="arquivo" id="arquivo" accept="image/*" class="campo" value='<?php echo $pro_mostrar[6]?>' >  <br><br>
+
+
+                                        <label for="codres">Código do Responsável: <?php echo $pro_mostrar[7]; ?></label>
+                                        <input type="hidden" name="codres" id="codres" value='<?php echo $pro_mostrar[7]?>'>
+
+                                        <!--<fieldset disabled>-->
+                                        <label for="codtur">Código da turma:</label>
+                                        <input type="text" name="codtur" id="codtur" value='<?php echo $pro_mostrar[8]?>'>
+                                          <!--</fieldset>-->
+
+                                          <?php
+                                              }
+                                          ?>
+
+                                          <?php
+                                            foreach($pro_br as $pro_mostrarbr)
+                                            {
+                                            
+                                          ?>
+                                          
+                                          <h3>Dados do Responsável:</h3>
+
+                                        <label for="codres">Código do Responsável: <?php echo $pro_mostrarbr[0]?></label>
+                                        <input type="hidden" name="codres" value='<?php echo $pro_mostrarbr[0]?>'>
+
+                                        <label for="nomeres">Nome Completo:</label>
+                                        <input type="text" name="nomeres" id="nomeres"  value='<?php echo $pro_mostrarbr[1]?>'  required/>
+                                        
+                                        <label for="rg">RG:</label>
+                                        <input type="text" name="rgres" id="rgres" value='<?php echo $pro_mostrarbr[2]?>'   required/>
+                                        
+                                        <label for="rescpf">CPF:</label>
+                                        <input type="text" name="rescpf" value='<?php echo $pro_mostrarbr[3]?>'  required /> 
+                                        
+                                        <label for="datares">Data de Nascimento:</label>
+                                        <input type="date" name="datares" id="datares" value='<?php echo $pro_mostrarbr[4]?>'   required />
+                                        
+                                        <label for="telefone">Telefone:</label>
+                                        <input type="tel" name="telefone" id="telefone" value='<?php echo $pro_mostrarbr[5]?>'  required />
+                                        
+                                        <label for="celular">Celular:</label>
+                                        <input type="tel" name="celular" id="celular" value='<?php echo $pro_mostrarbr[6]?>'  required />  
+                                        
+                                        <label for="email">E-mail:</label>
+                                        <input type="email" name="email" id="email" value='<?php echo $pro_mostrarbr[7]?>'  required />
+                                       
+                                        <label for="CEP">CEP</label>
+                                        <input type="text" name="cep"  value='<?php echo $pro_mostrarbr[8]?>'  required />
+                                      
+                                        <label for="endereco">Endereço:</label>
+                                        <input type="text" name="endereco" id="endereco" value='<?php echo $pro_mostrarbr[9]?>'  required />
+                                      
+                                        <label for="residencia">Anexa o comprovante de residência</label>
+                                        <input type="file" name="residencia" id="residencia" acccept="image/*" class="campo" value='<?php echo $pro_mostrarbr[10]?>'  required>  
+                                        
+                                        <label for="codusu">Código de usuário: <?php echo $pro_mostrarbr[11]?></label>
+                                        <input type="hidden" name="codusu" value='<?php echo $pro_mostrarbr[11]?>' >
+
+                                        <br> 
+                                        
+                                        <?php
+                                              }
+                                          ?>
+
                                         <br>
-                       
-                            
-                                        <font face="Helvetica"> <button type="submit" value="Enviar" class="btn btn-secondary">Enviar</button></font>
-                                    </form>
+                                        </select></div></div>
+                                        <br>
+                                        <font face="Helvetica"> <button name="btgravar" type="submit" value="Enviar" class="btn btn-secondary">Enviar</button></font>
+                                          
+                                    
+
+                                      </form>
+
+                                    <?php
+                                    extract($_POST, EXTR_OVERWRITE);
+                                    if(isset($btgravar))
+                                    {
+                                        include_once 'php/Aluno.php';
+                                        $pro = new Aluno();
+                                        $pro->setNome($nomecri);
+                                        $pro->setRG($rg);
+                                        $pro->setCPF($cpf);
+                                        $pro->setDataNasc($datacri);
+                                        $pro->setSexo($sexo);
+                                        $pro->setArquivo($arquivo);
+                                        $pro->setId_turma($codtur);
+                                        $pro->setId_aluno($codcri);
+                                        $pro->setId_responsavel($codres);
+                                        echo "<h3><br><br>".$pro->alterar2()."</h3>";
+
+                                        include_once 'php/Responsavel.php';
+                                        $probr = new Responsavel();
+                                        $probr->setNome($nomeres);
+                                        $probr->setRG($rgres);
+                                        $probr->setCPF($rescpf);
+                                        $probr->setDataNasc($datares);
+                                        $probr->setTelefone($telefone);
+                                        $probr->setCelular($celular);
+                                        $probr->setEmail($email);
+                                        $probr->setCEP($cep);
+                                        $probr->setEndereco($endereco);
+                                        $probr->setResidencia($residencia);
+                                        $probr->setId_responsavel($codres);
+                                        $probr->setId_usuario($codusu);
+                                        echo "<h3><br><br>".$probr->alterar2()."</h3>";
+
+                                        header("location:AlterarEditora.php");
+                                    }
+                                   ?>
+
+                                  
+                                  <a href = 'index.php'><button type="submit" class="btn btn-primary" >Home</button></a>
+                               
+
                                 </div>
                             </div>
+                              
                         </div>
                     </div>
 
