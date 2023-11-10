@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/estiloFale.css"> 
+    <link rel="stylesheet" href="css/font.css">
 
 </head>
 <body>
@@ -113,7 +114,7 @@
     </nav>
     <!--Fim do navbar-->
 
-        <h2 style="padding-top: 5%; color: #000000; font-family: 'Helvetica'; " class="text-center">Fale Conosco</h2>
+        <h2 style="padding-top: 5%;  " class="text-center">Fale Conosco</h2>
             <div class="container">
                       <div class="card">
                          <div class="card-body two">
@@ -124,8 +125,8 @@
                                         <label for="nomeres">Nome Completo:</label>
                                         <input type="text" name="nomeres" placeholder="Digite seu Nome Completo" autofocus="true" required />
 
-                                        <label for="email">Ser Voluntário</label>
-                                        <input type="text" name="nomeres" placeholder="Deixe seu recado" />
+                                        <label for="email">Assunto:</label>
+                                        <input type="text" name="nomeres" placeholder="Informe o assunto" />
                                         
                                         <label for="email">E-mail</label>
                                         <input type="email" name="email" placeholder="Exemplo@gmail.com" autofocus="true" required />
@@ -134,6 +135,7 @@
                                         <textarea name="message" cols="30" rows="10" placeholder="Digite sua menssaem" required> </textarea>
 
                                           <button type="submit" value="Enviar" class="btn btn-terceiro">Enviar</button>
+                                          
                                     </form>
                                 </div>
                                 

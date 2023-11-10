@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'cosmo';
+    src: url(../font/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'clara';
+    src: url(../font/Oswald-VariableFont_wght.ttf);
+}
+
+
+h1{
+    font-family: 'cosmo',sans-serif;
+   
+}
+
+p#import{
+    font-family: 'Dancing Script', cursive;
+
+}
+
+h2{
+    font-family: 'clara',sans-serif;
+    color:rgb(51, 51, 51)
+}
+
+p{
+    font-family: 'cosmo',sans-serif;
+}
+
+h3{
+    font-family: 'cosmo',sans-serif;
+   
+}
+
+h4{
+    font-family: 'cosmo',sans-serif;
+   
+}
+
+h6#import{
+    font-family: 'Dancing Script', cursive;
+   
+}
+
+
+h5{
+    font-family: 'clara',sans-serif;
+    color:rgb(85, 84, 84)
+}

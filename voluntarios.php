@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/volunt.css" />
+    <link rel="stylesheet" href="css/font.css" />
     <!-- Bootstrap -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
@@ -117,7 +118,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="text-center">Seja um Voluntário</h1>
-                    <p class="lead text-center">Contribua para a nossa missão sendo um voluntário. <br>
+                    <p id='import' class="lead text-center">Contribua para a nossa missão sendo um voluntário. <br>
                                                 Sua dedicação é fundamental para o nosso trabalho.</p>
                 </div>
             </div>
