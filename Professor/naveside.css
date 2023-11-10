@@ -1,0 +1,27 @@
+
+body{
+  background-color:#F6ECE1;
+  padding: 0;
+  margin: 0;
+}
+.container-fluid {
+    background: linear-gradient(#b6dbed, #b6dbed); 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  } 
+  
+  .nav{
+    --bs-nav-link-padding-x: 3rem;
+  }
+
+  .nav-link{
+    color: #304c68;
+    font-size: 20px;
+  }
+  .navbar {
+    border-radius: 0 !important; /* Remove a borda arredondada */
+}
+  
+   

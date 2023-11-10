@@ -1,0 +1,24 @@
+.card-body{
+    background: #eca0e2;
+  }
+
+  
+  .card-body.three{
+    background: #9bbbff;
+  }
+
+  .content-site{
+    font-family: system-ui, 'Segoe UI', 'Open Sans';
+  }
+
+  .container2{
+    background: #fff6d7;
+    height: 100%;
+  }
+
+  .slider-container{
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    justify-items: center;
+  }

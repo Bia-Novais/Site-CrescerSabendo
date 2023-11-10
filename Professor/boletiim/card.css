@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Cor de fundo pastel */
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%; /* Reduzindo a largura máxima para 80% */
+    width: 50%;
+    text-align: center;
+}
+
+.buttons-left, .buttons-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffd8ad; /* Cor de botão pastel */
+}
+
+/* Adicionando regras de estilo para telas menores */
+@media screen and (max-width: 600px) {
+    .card {
+        max-width: none; /* Removendo a largura máxima para telas menores */
+    }
+}
+
+
+
