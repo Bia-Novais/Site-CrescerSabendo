@@ -14,7 +14,6 @@
     <link href="css/home.css" rel="stylesheet">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/font.css">
 
 
 </head>
@@ -116,14 +115,14 @@
 
 
     <!--Informações sobre a ong-->
-    
+    <font face = "Helvetica">
     <section class="header-site">
 
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="text-center" >Onde os Sonhos Ganham Vida!!</h1>
-                    <p id="import"class="lead text-center" >Oferecemos atividades extracurriculares para desenvolver a 
+                    <p class="lead text-center" >Oferecemos atividades extracurriculares para desenvolver a 
                       criatividade e a cordenação motora dos pequenos.</p>
                     <p class="text-center"> 
                                

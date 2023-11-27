@@ -7,7 +7,6 @@
     <title>Login</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" type="text/css" href="css/logcss.css"> 
-    <link rel="stylesheet" href="css/font.css" />
 </head>
 <body>
     <div class="page">

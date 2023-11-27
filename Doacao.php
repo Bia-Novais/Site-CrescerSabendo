@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/doe.css" />
-    <link rel="stylesheet" href="css/font.css" />
     <!-- Bootstrap -->
 
     <script src="js/scripts.js" defer></script>
@@ -125,7 +124,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="text-center">Doações para Crescer Sabendo</h1>
-                    <p id='import'class="lead text-center">É com grande prazer que a ONG de Educação Infantil Crescer Sabendo <br>
+                    <p class="lead text-center">É com grande prazer que a ONG de Educação Infantil Crescer Sabendo <br>
                                               anuncia a oportunidade de contribuir para nossa causa por meio de doações <br>
                                               de objetos, móveis ou eletrônicos. Sua generosidade pode fazer a diferença <br>
                                               na vida das crianças que atendemos. Contribua para Nossa Missão!

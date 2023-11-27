@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/cadacss.css"> 
-    <link rel="stylesheet" href="css/font.css" />
 
 </head>
 <body>

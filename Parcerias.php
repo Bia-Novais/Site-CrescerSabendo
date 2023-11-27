@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/parcerias.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/font.css" />
 
 </head>
 <body>
@@ -142,8 +141,9 @@
                 <div class="info">
                   <h2 class="parc">Kedu</h2>
                   <div class="descricao">
-                    <p> Kedu é uma das parcerias da nossa ONG. A Kedu desempenha um papel fundamental ao nos ajudar a atender os responsáveis dos alunos de forma tranquila,
-                       estabelecendo uma relação amistosa com eles. Com a assistência da Kedu, planejamos um futuro promissor para nossas escolas.</p>
+                    <p>Kedu é uma das parcerias que a nossa Ong possui. A Kedu nos ajuda a atender os responsáveis 
+                      pelos alunos de um jeito tranquilo, com uma relaçao mais amistosa com eles. Planejamos nossas 
+                      escolas com um ótimo futuro com a ajuda da Kedu.</p>
                   </div>
                 </div>
               </div>
@@ -161,9 +161,9 @@
                 <div class="info">
                   <h2 class="parc">Porticus</h2>
                   <div class="descricao">
-                    <p>Porticus é outra das nossas parcerias.
-                       Além de nos oferecer uma abordagem eficaz para ensinar às crianças como ajudar e cuidar do nosso planeta,
-                       também recebemos e distribuímos livros didáticos para crianças que não têm condições de adquiri-los.</p>
+                    <p>Porticus é uma das outras das nossas parcerias. Além de nos fornecer uma boa maneira para as
+                      crianças sobre a formar de ajudar e cuidar do nosso planeta, recebemos e também fornecemos 
+                      livros didáticos para crianças que não possuem condições o uso.</p>
                   </div>
                 </div>
               </div>
@@ -174,16 +174,17 @@
             <div class="row">
               <div class="left-column">
                 <div class="img-card">
-                  <img src="img/img_Parc/roche.jpg" alt="">
+                  <img src="img/img_Parc/foto3.jpg" alt="">
                 </div>
               </div>
               <div class="right-column">
                 <div class="info">
                   <h2 class="parc">Roche</h2>
                   <div class="descricao">
-                    <p>A Roche, assim como a Kedu, nos ajuda a estabelecer uma melhor relação com os responsáveis das crianças,
-                       principalmente aquelas que apresentam doenças que afetam seu desenvolvimento ou aprendizado.
-                        Com a Roche, temos as ferramentas certas para ensinar os estudos às crianças com deficiências.</p>
+                    <p>A Roche, assim como Kedu, nos ajuda a ter uma melhor relação com os responsáveis das 
+                      crianças, principalmente com aquelas que apresentam doenças que afetam seu desenvolvimento
+                      ou seu aprendizado. Com a Roche, temos maneiras certas de ensinar os estudos para as
+                      crianças com deficiências.</p>
                   </div>
                 </div>
               </div>

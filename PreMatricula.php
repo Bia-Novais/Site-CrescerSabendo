@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/prematricula.css"> 
-    <link rel="stylesheet" href="css/font.css" />
 
 </head>
 <body>
@@ -124,14 +123,14 @@
                                     <form action=".../mailer/enviar-prematricula.php" method="post" class="formPreM">
                                         
                                     
-                                     <p>O objetivo da pré-matrícula é avaliar as condições do aluno que deseja integrar a nossa ONG, 
+                                    <font face = "Helvetica"> <p>O objetivo da pré-matrícula é avaliar as condições do aluno que deseja integrar a nossa ONG, 
                                         uma vez que o nosso objetivo é ajudar as crianças que não têm acesso a uma boa educação a encontrar uma educação de qualidade.
                                         Por conseguinte, assim que tivermos avaliado as informações fornecidas, enviaremos uma resposta através do endereço eletrónico (o e-mail) indicado no formulário.
                                         Se for aprovado, será encaminhado para uma nova página para completar a matrícula.</p></font>
                                         
                                           
-                                        <h3>Dados da criança:</h3>
-                                        <label for="nomecri">Nome Completo da criança:</label>
+                                        <h3><font face = "Helvetica">Dados da criança:</font></h3>
+                                        <label for="nomecri"><font face = "Helvetica">Nome Completo da criança:</font></label>
                                         <input type="text" name="nomecri" placeholder="Digite o Nome Completo" autofocus="true" />
                                         <label for="rg">RG</label>
                                          <input type="text" placeholder="Digite o RG" />
@@ -235,7 +234,7 @@
                                         </select>
                                         <br>
                             
-                        <button type="submit" value="Enviar" class="btn btn-quarto">Enviar</button>
+                       <font face = "Helvetica"> <button type="submit" value="Enviar" class="btn btn-quarto">Enviar</button></font>
                                     </form>
                                 </div>
                           </div>

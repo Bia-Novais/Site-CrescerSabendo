@@ -13,14 +13,10 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/volunt.css" />
-    <link rel="stylesheet" href="css/font.css" />
     <!-- Bootstrap -->
 
-    <script src="js/scripts.js" defer></script></head>
-    <body id="checkout-page">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
     <!--Começo do navbar, configurações de responsividade-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -121,7 +117,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="text-center">Seja um Voluntário</h1>
-                    <p id='import' class="lead text-center">Contribua para a nossa missão sendo um voluntário. <br>
+                    <p class="lead text-center">Contribua para a nossa missão sendo um voluntário. <br>
                                                 Sua dedicação é fundamental para o nosso trabalho.</p>
                 </div>
             </div>

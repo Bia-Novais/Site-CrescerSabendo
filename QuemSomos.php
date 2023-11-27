@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/qs.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/style.css"> 
-    <link rel="stylesheet" href="css/font.css">
   </head>
 <!--<style>
 .header{
@@ -122,13 +121,13 @@
     </nav>
     <!--Fim do navbar-->
     <header>
-    
+      <font face = "Helvetica"><section class="header">
 
       <div class="container">
           <div class="row">
               <div class="col-xs-12">
                   <h1 class="text-center">QUEM SOMOS!!</h1>
-                  <p id='import'class="lead text-center">A Educação Infantil da Crescer Sabendo tem o propósito<br>
+                  <p class="lead text-center">A Educação Infantil da Crescer Sabendo tem o propósito<br>
                                               de oferecer todas as condições para os alunos darem os<br> 
                                               primeiros passos na vida escolar, considerando tanto a <br>
                                               alfabetização quanto outros aspectos que desempenham<br>
@@ -267,7 +266,7 @@
               <span class="fas fa-plus-circle"></span>
             </div>
             <h5 class="carousel-item__details--title">MUSICALIZAÇÃO</h5>
-            <h6 id='import'class="carousel-item__details--subtitle">Consciência rítmica.</h6>
+            <h6 class="carousel-item__details--subtitle">Consciência rítmica.</h6>
             </div>
         </div>
         <div class="carousel-item">
@@ -327,7 +326,7 @@
               <span class="fas fa-plus-circle"></span>
             </div>
             <h5 class="carousel-item__details--title">ALFABETIZAÇÃO</h5>
-            <h1 class="carousel-item__details--subtitle">Desenvolvimento cognitivo</h1>
+            <h6 class="carousel-item__details--subtitle">Desenvolvimento cognitivo</h6>
           </div>
         </div>
 
@@ -343,7 +342,7 @@
               <span class="fas fa-plus-circle"></span>
             </div>
             <h5 class="carousel-item__details--title">SHANTALA-massagem</h5>
-            <h1 class="carousel-item__details--subtitle">Sono mais tranquilo.</h1>
+            <h6 class="carousel-item__details--subtitle">Sono mais tranquilo.</h6>
           </div>
         </div>
 
@@ -359,7 +358,7 @@
             <span class="fas fa-plus-circle"></span>
           </div>
           <h5 class="carousel-item__details--title">Natação</h5>
-          <h1 class="carousel-item__details--subtitle">Seguraça na Agua</h1>
+          <h6 class="carousel-item__details--subtitle">Seguraça na Agua</h6>
         </div>
       </div>
 
@@ -375,7 +374,7 @@
             <span class="fas fa-plus-circle"></span>
           </div>
           <h5 class="carousel-item__details--title">Desafio Motor </h5>
-          <h1 class="carousel-item__details--subtitle">Almofadas e traveseiros</h1>
+          <h6 class="carousel-item__details--subtitle">Almofadas e traveseiros</h6>
         </div>
       </div>
 
@@ -391,7 +390,7 @@
             <span class="fas fa-plus-circle"></span>
           </div>
           <h5 class="carousel-item__details--title">Literatura</h5>
-          <h1 class="carousel-item__details--subtitle">Hora do Conto</h1>
+          <h6 class="carousel-item__details--subtitle">Hora do Conto</h6>
         </div>
       </div>
 
@@ -407,7 +406,7 @@
             <span class="fas fa-plus-circle"></span>
           </div>
           <h5 class="carousel-item__details--title">Descobrindo texturas</h5>
-          <h1 class="carousel-item__details--subtitle">brinquedos e objetos</h1>
+          <h6 class="carousel-item__details--subtitle">brinquedos e objetos</h6>
         </div>
       </div>
 
@@ -423,7 +422,7 @@
             <span class="fas fa-plus-circle"></span>
           </div>
           <h5 class="carousel-item__details--title">Desenvolver oufato</h5>
-          <h1 class="carousel-item__details--subtitle">Descobrir cheiros</h1>
+          <h6 class="carousel-item__details--subtitle">Descobrir cheiros</h6>
         </div>
       </div>
     </div>
@@ -710,7 +709,7 @@
 
 <!--------------Horarios--------------->
 <center><h2>Horarios de Funcionamento</p></h2>
-<h2 size="4" >De Segunda a Sexta Feira das 6:00h ás 20:00h</h2></center>
+<font size="4" >De Segunda a Sexta Feira das 6:00h ás 20:00h</font></center>
 <br>
 <div class="ag-format-container">
     <div class="ag-courses_item">
