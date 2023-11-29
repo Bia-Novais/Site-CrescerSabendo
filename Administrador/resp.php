@@ -60,20 +60,12 @@ th, td {
 <a href="adm.php" >
 					<i class="material-icons">home</i>Inicio</a>
                 </li>
-                
-                
-                <li class="dropdown">
-          <a href="resp.php" >
-					<i class="material-icons">person</i>Responsável</a>
-                </li>
 
                 <li class="dropdown">
           <a href="listaAL.php" >
 					<i class="material-icons">face</i>Alunos</a>
                 </li>
                 
-                
-
                 <li class="dropdown">
           <a href="prof.php" >
 					<i class="material-icons">person</i>Professores</a>
@@ -216,7 +208,7 @@ th, td {
                 <h4 class="page-title">Administrador</h4>  
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Booster</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Professores</li>
+                    <li class="breadcrumb-item active" aria-current="page">Alunos</li>
                   </ol>                
             </div>
 			
@@ -234,24 +226,24 @@ th, td {
 					   <div class="table-title">
 					     <div class="row">
 						     <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
-							    <h2 class="ml-lg-2">Cadastro de Usuarios</h2>
+							    <h2 class="ml-lg-2">Cadastro de alunos</h2>
 							 </div>
 							 <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center"></div><br><br>
 							   <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
 							   <i class="material-icons">&#xE147;</i>
-							   <span>Adicionar novo usuario</span>
+							   <span>Adicionar novo aluno</span>
 							   </a>
 							   <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
 							   <i class="material-icons">&#xE15C;</i>
-							   <span>Deletar usuario</span>
+							   <span>Deletar aluno</span>
 							   </a>
                                <a href="#editEmployeeModal" class="btn btn-warning" data-toggle="modal">
 							   <i class="material-icons">&#xE15C;</i>
-							   <span>Editar usuario</span>
+							   <span>Editar aluno</span>
 							   </a>
                                <a href="#consuEmployeeModal" class="btn btn-primary" data-toggle="modal">
 							   <i class="material-icons">&#xE15C;</i>
-							   <span>Consultar usuario</span>
+							   <span>Consultar aluno</span>
 							   </a>
 							 </div>
 					     </div>
@@ -261,31 +253,37 @@ th, td {
 
     <?php
 
-    include_once 'pgadm.php';
+    include_once 'alunoadm.php';
 
-    $p = new paginas();
+    $p = new aluno();
     $pro_bd=$p->listar();
     
     ?>
 <center>
   <table>
 <tr>
-  <th><font color ="black">Cod. usuario</font> </th>
-  <th><font color ="black">Nome de Usuario </font> </th>
-  <th><font color ="black">Senha </font> </th>
-  <th><font color ="black">Perfil </font> </th>
-  
+  <th><font color ="black">Id. Aluno</font> </th>
+  <th><font color ="black"> Nome </font> </th>
+  <th><font color ="black">CPF.</font> </th>
+  <th><font color ="black">RG</font> </th>
+  <th><font color ="black">Data de nasc.</font> </th>
+  <th><font color ="black">Id. respon</font> </th>
+  <th><font color ="black">Id. turma</font> </th>
 </tr>
 
    <?php
   
    foreach($pro_bd as $pro_mostrar)
    {
+        
         echo"<tr>";
-        echo "<td>" .$pro_mostrar[0]."</td>";
-        echo "<td>" .$pro_mostrar[1]."</td>";    
-        echo "<td>" .$pro_mostrar[2]."</td>";  
-        echo "<td>" .$pro_mostrar[3]."</td>";  
+        echo "<td><span style='color:black;'>" .$pro_mostrar[0]."</span></td>";
+        echo "<td><span style='color:black;'>" .$pro_mostrar[1]."</span></td>";    
+        echo "<td><span style='color:black;'>" .$pro_mostrar[2]."</span></td>";     
+        echo "<td><span style='color:black;'>" .$pro_mostrar[3]."</span></td>";  
+        echo "<td><span style='color:black;'>" .$pro_mostrar[4]."</span></td>";    
+        echo "<td><span style='color:black;'>" .$pro_mostrar[5]."</span></td>"; 
+        echo "<td><span style='color:black;'>" .$pro_mostrar[6]."</span></td>";
         echo"</tr>";
        
    }
@@ -302,7 +300,7 @@ th, td {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Adicionar turma</h5>
+        <h5 class="modal-title">Adicionar aluno</h5>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
          </button>
@@ -311,21 +309,33 @@ th, td {
         <div class="formulario">
             <div class="box-title">
               <h2 class="title">Adicionar
-                <p class="subtitle">Adicione nova turma</p>
+                <p class="subtitle">Adicione novos alunos</p>
               </h2>
             </div>
-            <form name = "turma" method = "POST" action = "">   
+            <form name = "aluno" method = "POST" action = "">   
                 <span>
-                    <input name = "NomeUsuario" type = "text"class="input-card"  placeholder="Usuario" autocomplete="off" />
-                    <label for="cod"> <i class="icon icon-user-outline"></i> </label>
+                    <input name = "Nome" type = "text"  class="input-card" placeholder="nome" autocomplete="off" />
+                    <label for="nnome"> <i class="icon icon-mail-3"></i> </label>
                 </span>
                 <span>
-                    <input name = "Senha" type = "text"class="input-card"  placeholder="Senha" autocomplete="off" />
-                    <label for="SEH"> <i class="icon icon-user-outline"></i> </label>
+                    <input name = "RG" type = "text"  class="input-card" placeholder="rg" autocomplete="off" />
+                    <label for="rgg"> <i class="icon icon-info"></i> </label>
                 </span>
                 <span>
-                    <input name = "Perfil" type = "text"class="input-card"  placeholder="Perfil" autocomplete="off" />
-                    <label for="cod"> <i class="icon icon-user-outline"></i> </label>
+                    <input name = "CPF" type = "text"  class="input-card" placeholder="cpf" autocomplete="off" />
+                    <label for="cpff"> <i class="icon icon-info"></i> </label>
+                </span>
+                <span>
+                    <input name = "DataNasc" type = "text"  class="input-card" placeholder="data nascimento" autocomplete="off" />
+                    <label for="data"> <i class="icon icon-info"></i> </label>
+                </span>
+                <span>
+                    <input name = "Id_responsavel" type = "text"  class="input-card" placeholder="Cod_respons" autocomplete="off" />
+                    <label for="respons"> <i class="icon icon-info"></i> </label>
+                </span>
+                <span>
+                    <input name = "Id_turma" type = "text"  class="input-card" placeholder="Cod_turma" autocomplete="off" />
+                    <label for="respons"> <i class="icon icon-info"></i> </label>
                 </span>
                 <div class="box-pulse">
                      <input name="enviarbt" type="submit" value="Add" class="btn-submit" > 
@@ -336,23 +346,26 @@ th, td {
       </div><!--Box Formulario-->
     </div>
   </div>
-  </div>
+
 
 <?php
 extract($_POST, EXTR_OVERWRITE);
 if (isset($enviarbt))
 {
-    include_once 'pgadm.php';
-    $pro = new paginas();
-    //$pro -> setcod_turma($Id_turma);
-    $pro -> setnoeusu($NomeUsuario);
-    $pro -> setsenhaa($Senha);
-    $pro -> setperfill($Perfil);
+    include_once 'alunoadm.php';
+    $pro = new aluno();
+    //$pro -> setiid_aluno($Id_aluno);
+    $pro -> setnome($Nome);
+    $pro -> setRg($RG);
+    $pro -> setCpf($CPF);
+    $pro -> setdatNasc($DataNasc);
+    $pro -> setcod_respon($Id_responsavel);
+    $pro -> setcod_turma($Id_turma);
     echo "<h3><br><br>" . $pro->salvar() . "</h3>";
 
 }
 
-?>
+?></div>
 					   <!----fim-modal end--------->
 					   
 					   
@@ -402,13 +415,13 @@ if (isset($enviarbt))
             
             <div class="box-title">
               <h2 class="title">Excluir
-                <p class="subtitle">Exclua usuario</p>
+                <p class="subtitle">Exclua alunos</p>
               </h2>
             </div>
 
             <form name = "excl" method = "POST" action = "">   
                 <span>
-                    <input name = "Id_usuario" type = "text"class="input-card"  placeholder="Codigo da turma" autocomplete="off" />
+                    <input name = "Cod_aluno" type = "text"class="input-card"  placeholder="Codigo do aluno" autocomplete="off" />
                     <label for="cod"> <i class="icon icon-user-outline"></i> </label>
                 </span>
                 <div class="box-pulse">
@@ -425,9 +438,9 @@ if (isset($enviarbt))
     extract($_POST, EXTR_OVERWRITE);
     if(isset($btnenviar))
     {
-        include_once 'pgadm.php';
-        $pro = new paginas();
-        $pro-> setcod_usuario($Id_usuario);
+        include_once 'alunoadm.php';
+        $pro = new aluno();
+        $pro-> setcod_aluno($Cod_aluno);
         echo "<h3><br><br>" . $pro->exclusao() . "</h3>";
     }
     ?>

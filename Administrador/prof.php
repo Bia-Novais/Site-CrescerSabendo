@@ -381,6 +381,7 @@ if (isset($enviarbt))
 {
     include_once 'profadm.php';
     $pro = new professor();
+    $pro_bd=$p->listar();
     //$pro -> setcod_professor($Cod_professor);
     $pro -> setnome($Nome);
     $pro -> setrg($RG);
@@ -404,30 +405,149 @@ if (isset($enviarbt))
 					   
 					   
 				   <!----edit-modal start--------->
-		<div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
+
+          
+
+<div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Editar aluno</h5>
+        <h5 class="modal-title">Editar Professor</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <div class="form-group">
-		    <label>Nome</label>
-			<input type="text" name= "nome" class="form-control" required>
-		</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-success">Salvar</button>
+
+          <form action="./prof.php/#Alterar" method="post" enctype="multipart/form-data">
+            <label>Código do Professor</label>
+              <input type="text" name= "Id_professor" class="form-control" required><br><br>
+
+              <button type="button" name="cancelar" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button name="btconsultar" type="submit" class="btn btn-success">Buscar</button>
+          </form>
+		    </div>
       </div>
     </div>
   </div>
 </div>
 
-					   <!----edit-modal end--------->	   
+
+<!----alterar start--------->
+                <?php
+                    $Id_professor = $_POST["Id_professor"];
+                    include_once 'profadm.php';
+                    $p = new professor();            
+                    $p->setcod_professor($Id_professor);
+                    $pro_bd=$p->alterar();
+                ?>
+
+
+<div class="modal fade" tabindex="-1" name="Alterar" id="Alterar" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Alterar professor</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+         </button>
+        </div>
+   <div class="box-formulario">        
+        <div class="formulario">
+            <div class="box-title">
+              <h2 class="title">Alterar
+                <p class="subtitle">Alterar professores</p>
+              </h2>
+            </div>
+            <form name = "aluno" method = "POST" action = "">   
+                  
+                  <?php
+
+                  foreach($pro_bd as $pro_mostrar)
+                    {
+                  ?>
+                  <span>
+                    <input name = "Id_professor" type = "hidden" class="input-card" <?php echo $pro_mostrarbr[0]?> autocomplete="off" />
+                    <label for="codpro"> <i class="icon icon-user-outline"></i> </label>
+                </span>
+                <span>
+                    <input name = "Nome" type = "text"class="input-card" value='<?php echo $pro_mostrarbr[1]?>' autocomplete="off" />
+                    <label for="cod"> <i class="icon icon-user-outline"></i> </label>
+                </span>
+                <span>
+                    <input name = "RG" type = "text"  class="input-card" value='<?php echo $pro_mostrarbr[2]?>' autocomplete="off" />
+                    <label for="nnome"> <i class="icon icon-mail-3"></i> </label>
+                </span>
+                <span>
+                    <input name = "CPF" type = "text"  class="input-card" value='<?php echo $pro_mostrarbr[3]?>' autocomplete="off" />
+                    <label for="respons"> <i class="icon icon-info"></i> </label>
+                </span>
+                <span>
+                    <input name = "DataNasc" type = "text"  class="input-card" value='<?php echo $pro_mostrarbr[4]?>' autocomplete="off" />
+                    <label for="ender"> <i class="icon icon-info"></i> </label>
+                </span>
+                <span>
+                    <input name = "Telefone" type = "text"  class="input-card" value='<?php echo $pro_mostrarbr[5]?>' autocomplete="off" />
+                    <label for="cpff"> <i class="icon icon-info"></i> </label>
+                </span>
+                <span>
+                    <input name = "Celular" type = "text"  class="input-card" value='<?php echo $pro_mostrarbr[6]?>' autocomplete="off" />
+                    <label for="rgg"> <i class="icon icon-info"></i> </label>
+                </span>
+                <span>
+                    <input name = "Endereco" type = "text"  class="input-card" value='<?php echo $pro_mostrarbr[7]?>' autocomplete="off" />
+                    <label for="data"> <i class="icon icon-info"></i> </label>
+                </span>
+                <span>
+                    <input name = "CEP" type = "text"  class="input-card" value='<?php echo $pro_mostrarbr[8]?>' autocomplete="off" />
+                    <label for="data"> <i class="icon icon-info"></i> </label>
+                </span>
+                <span>
+                    <input name = "Id_usuario" type = "text"  class="input-card" value='<?php echo $pro_mostrarbr[9]?>' autocomplete="off" />
+                    <label for="data"> <i class="icon icon-info"></i> </label>
+                </span>
+                <span>
+                    <input name = "Id_turma" type = "text"  class="input-card" value='<?php echo $pro_mostrarbr[10]?>' autocomplete="off" />
+                    <label for="data"> <i class="icon icon-info"></i> </label>
+                </span>
+                <div class="box-pulse">
+                     <input name="enviaralt" type="submit" value="Add" class="btn-submit" > 
+                     <input type="reset" value="Sair" class="btn-reset">
+                     <?php
+                    }
+                     ?>
+                    </div>
+         </form>
+        </div>
+      </div><!--Box Formulario-->
+    </div>
+  </div>
+  </div>
+
+<?php
+extract($_POST, EXTR_OVERWRITE);
+if (isset($enviaralt))
+{
+    include_once 'profadm.php';
+    $pro = new professor();
+    $pro -> setnome($Nome);
+    $pro -> setrg($RG);
+    $pro -> setcpff($CPF);
+    $pro -> setDAT($DataNasc);
+    $pro -> settelefone($Telefone);
+    $pro -> setcelu($Celular);
+    $pro -> setede($Endereco);
+    $pro -> setcepp($CEP);
+    $pro -> setIDUSU($Id_usuario);
+    $pro -> setIDTUR($Id_turma);
+    $pro-> setcod_professor($Id_professor);
+    echo "<h3><br><br>" . $pro->alterar2() . "</h3>";
+
+}
+
+?>
+					   <!----alterar end--------->	   
 					   
 					   
 					 <!----delete-modal start--------->
@@ -456,7 +576,7 @@ if (isset($enviarbt))
                     <label for="cod"> <i class="icon icon-user-outline"></i> </label>
                 </span>
                 <div class="box-pulse">
-                     <input name="btnenviar" type="submit" value="Excluir" class="btn-submit" > 
+                     <input name="btdelet" type="submit" value="Excluir" class="btn-submit" > 
                      <input name="limparbt" type="reset" value="Limpar" class="btn-reset">
                     </div>
             </form>
@@ -467,7 +587,7 @@ if (isset($enviarbt))
 </div>
 <?php
     extract($_POST, EXTR_OVERWRITE);
-    if(isset($btnenviar))
+    if(isset($btdelet))
     {
         include_once 'profadm.php';
         $pro = new professor();

@@ -10,6 +10,7 @@ class aluno
     private $RG;
     private $CPF;
     private $DataNasc;
+    private $Sexo;
     private $Id_responsavel;
     private $Id_turma;
     

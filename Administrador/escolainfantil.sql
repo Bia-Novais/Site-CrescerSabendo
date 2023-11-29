@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09-Nov-2023 às 15:29
--- Versão do servidor: 10.4.27-MariaDB
--- versão do PHP: 8.0.25
+-- Tempo de geração: 09-Nov-2023 às 22:07
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,17 +35,17 @@ CREATE TABLE `aluno` (
   `CPF` varchar(14) NOT NULL,
   `DataNasc` date NOT NULL,
   `Sexo` char(1) NOT NULL,
-  `arquivo` varchar(50) NOT NULL,
+  `arquivo` varchar(50) DEFAULT NULL,
   `Id_responsavel` int(11) NOT NULL,
   `Id_turma` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `aluno`
 --
 
 INSERT INTO `aluno` (`Id_aluno`, `Nome`, `RG`, `CPF`, `DataNasc`, `Sexo`, `arquivo`, `Id_responsavel`, `Id_turma`) VALUES
-(1, '', '', '', '0000-00-00', '', '', 2, 0);
+(1, 'Laila Santos', '123.345.698.8', '123.456.789.98', '2023-11-08', 'F', './imgbanco/logo.jpeg', 2, 3);
 
 -- --------------------------------------------------------
 
@@ -61,7 +61,7 @@ CREATE TABLE `avaliacao` (
   `Comunicacao` varchar(100) NOT NULL,
   `RealizacaoAtividades` varchar(100) NOT NULL,
   `DesenvolvimentoHabilidades` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -76,7 +76,7 @@ CREATE TABLE `coordenador` (
   `Endereco` varchar(100) NOT NULL,
   `Telefone` varchar(10) NOT NULL,
   `Id_usuario` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -91,7 +91,7 @@ CREATE TABLE `matricula` (
   `aula` int(25) NOT NULL,
   `Id_turma` int(11) NOT NULL,
   `Id_aluno` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -111,7 +111,7 @@ CREATE TABLE `professor` (
   `CEP` varchar(9) NOT NULL,
   `Id_usuario` int(11) NOT NULL,
   `Id_turma` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -123,23 +123,23 @@ CREATE TABLE `responsavel` (
   `Id_responsavel` int(11) NOT NULL,
   `Nome` varchar(100) NOT NULL,
   `RG` varchar(12) NOT NULL,
-  `CPF` varchar(14) NOT NULL,
+  `CPF` varchar(15) NOT NULL,
   `DataNasc` varchar(10) NOT NULL,
   `Telefone` varchar(10) NOT NULL,
   `Celular` varchar(15) NOT NULL,
   `email` varchar(50) NOT NULL,
   `CEP` varchar(9) NOT NULL,
   `Endereco` varchar(100) NOT NULL,
-  `residencia` varchar(50) NOT NULL,
+  `residencia` varchar(50) DEFAULT NULL,
   `Id_usuario` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `responsavel`
 --
 
 INSERT INTO `responsavel` (`Id_responsavel`, `Nome`, `RG`, `CPF`, `DataNasc`, `Telefone`, `Celular`, `email`, `CEP`, `Endereco`, `residencia`, `Id_usuario`) VALUES
-(2, 'José Almeida da Rocha Souares', '20.123.456-7', '987.654.321-02', '1979-01-09', '2346-9876', '(11)98765-4321', 'teste@gmail.com', '64005-210', 'Rua Azul do Mar Areia, 020', '', 101);
+(2, 'José Almeida da Souares', '203.123.456-', '123.123.123.36', '1979-01-09', '2346-9876', '(11)98765-4321', 'teste@gmail.com', '64005-210', 'Rua Azul do Mar Areia, 020', './imgbanco/logo.jpeg', 101);
 
 -- --------------------------------------------------------
 
@@ -150,7 +150,7 @@ INSERT INTO `responsavel` (`Id_responsavel`, `Nome`, `RG`, `CPF`, `DataNasc`, `T
 CREATE TABLE `turma` (
   `Id_turma` int(11) NOT NULL,
   `Serie` varchar(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -163,7 +163,7 @@ CREATE TABLE `usuario` (
   `NomeUsuario` varchar(100) NOT NULL,
   `Senha` varchar(10) NOT NULL,
   `Perfil` varchar(30) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Índices para tabelas despejadas

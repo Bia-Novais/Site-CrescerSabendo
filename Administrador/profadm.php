@@ -174,6 +174,52 @@ function salvar()
     }
 }
 
+function alterar()
+{
+    try
+    {
+        $this->conn =new Conectar();
+        $sql = $this->conn->prepare("select * from professor where Id_professor = ?"); //infoemei o ?(parametro)
+        @$sql-> bindParam(1, $this->getcod_professor(), PDO::PARAM_STR);
+        $sql->execute();
+        return $sql->fetchAll();
+        $this->conn = null;
+    }
+    catch(PDOException $exc)
+    {
+        echo "Erro ao alterar. ".$exc->getMessage();
+    }
+}
+
+function alterar2()
+{
+    try
+    {
+        $this-> conn = new Conectar();
+        $sql = $this->conn->prepare("update professor set Nome = ?, RG = ?, CPF = ?, DataNasc = ?, Telefone = ?, Celular = ?, Endereco = ?, CEP = ?, Id_usuario = ?, Id_turma = ? where Id_professor = ?");
+        @$sql-> bindParam(1, $this->getnome(), PDO::PARAM_STR);
+        @$sql-> bindParam(2, $this->getrg(), PDO::PARAM_STR);
+        @$sql-> bindParam(3, $this->getcpff(), PDO::PARAM_STR);
+        @$sql-> bindParam(4, $this->getDAT(), PDO::PARAM_STR);
+        @$sql-> bindParam(5, $this->gettelefone(), PDO::PARAM_STR);
+        @$sql-> bindParam(6, $this->getcelu(), PDO::PARAM_STR);
+        @$sql-> bindParam(7, $this->getede(), PDO::PARAM_STR);
+        @$sql-> bindParam(8, $this->getcepp(), PDO::PARAM_STR);
+        @$sql-> bindParam(9, $this->getIDUSU(), PDO::PARAM_STR);
+        @$sql-> bindParam(10, $this->getIDTUR(), PDO::PARAM_STR);
+        @$sql-> bindParam(11, $this->getcod_professor(), PDO::PARAM_STR);
+        if($sql->execute() == 1)
+        {
+            return "";
+        }
+        $this->conn = null;
+    }
+    catch(PDOException $exc)
+    {
+        echo "Erro ao salvar o registro. ".$exc->getMessage();
+    }
+}
+
 function exclusao()
 {
     try
