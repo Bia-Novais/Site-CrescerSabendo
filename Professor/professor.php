@@ -88,7 +88,7 @@ session_start(); echo $_SESSION['user_details']['NomeUsuario']; ?>
 <div class="sidebar">
     <a href="professor.php"><i class="fas fa-home"></i><span class="tooltip">Home</span></a>
 <a href="boletiim/escolheturma.php"><i class="fas fa-users"></i><span class="tooltip">Turmas</span></a>
-    <a href="../QuickTalk/index.html"><i class="fas fa-comments"></i><span class="tooltip">Chat</span></a>
+    <a href="QuickTalk/index.html"><i class="fas fa-comments"></i><span class="tooltip">Chat</span></a>
     <a href="muraldeavisos.php"><i class="fas fa-bullhorn"></i><span class="tooltip">Avisos</span></a>
 
 </div></div>
